@@ -47,8 +47,12 @@ header {
   transition: transform 0.3s;
 }
 
-/* 기존 스타일 외에 추가된 스타일 */
 #toggle-nav-btn {
   top: 10px;
   right: 10px;
+  border-radius: 50%;
+}
+
+.nav-icon {
+  font-size: 1.5rem; /* 원하는 크기로 변경 */
 }
