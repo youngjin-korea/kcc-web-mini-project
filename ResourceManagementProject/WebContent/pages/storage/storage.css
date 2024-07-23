@@ -1,0 +1,45 @@
+main {
+  padding: 0.3rem;
+  font-size: 1.125rem;
+}
+
+header {
+  padding: 0.9rem;
+  font-weight: 600;
+}
+#body {
+  /* display: flex; */
+}
+
+/* id list */
+#list {
+  overflow-x: auto;
+}
+#list-s {
+  overflow-x: auto;
+}
+#table-s {
+  /* width: 5rem; */
+}
+/* controll */
+#controll {
+  /* width: 300rem; */
+}
+
+table {
+  width: 45rem;
+  border-collapse: collapse;
+  font-size: 1rem;
+}
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+th {
+  background-color: #4caf50;
+}
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
