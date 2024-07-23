@@ -1,14 +1,70 @@
-@import url("reset.css");
-
-#navbar-container {
-  position: fixed; /* or absolute */
-  top: 0;
-  width: 100%;
-  z-index: 1000; /* Ensure it stays on top */
-  background-color: white; /* Optional: for visibility */
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  margin: 0;
 }
 
-body {
-  padding-top: 60px; /* Adjust based on navbar height */
-  background-color: #f5f5f5;
+/* .header-container header {
+  flex: 0 0 auto;
+  position: fixed;
+  left: 0;
+  right: 0;
+} */
+
+.header-container {
+  top: 0;
+  position: fixed;
+  width: 100%;
+}
+
+.navbar-container {
+  width: 250px;
+  transition: width 0.3s;
+  overflow: hidden;
+  position: relative;
+  margin-top: 5.12rem;
+}
+
+.navbar-container.collapsed {
+  width: 100px;
+}
+
+.navbar-container.collapsed .navbar-brand,
+.navbar-container.collapsed .nav-text {
+  display: none;
+}
+
+.navbar-container.collapsed .nav-item {
+  display: flex;
+  justify-content: center;
+}
+
+.navbar-container.collapsed #toggle-nav-btn {
+  margin: auto;
+}
+
+.content {
+  flex: 1 0 auto;
+  margin-left: 250px;
+  margin-top: 20px;
+  transition: margin-left 0.3s;
+}
+
+.navbar-container.collapsed ~ .content {
+  margin-left: 100px;
+}
+
+#toggle-nav-btn {
+  transition: transform 0.3s;
+}
+
+#toggle-nav-btn {
+  top: 10px;
+  right: 10px;
+  border-radius: 50%;
+}
+
+.nav-icon {
+  font-size: 1.5rem; /* 원하는 크기로 변경 */
 }
