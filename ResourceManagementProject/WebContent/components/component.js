@@ -15,7 +15,7 @@ customElements.define("custom-header", customHeader);
 
 class customNav extends HTMLElement {
   connectedCallback() {
-    this.innerHTML = `     <nav>
+    this.innerHTML = `     <nav style="position:sticky; top:0;">
         <ul style="list-style: none; margin: 0; padding: 0">
           <li>menu</li>
           <li>
