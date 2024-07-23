@@ -1,142 +1,129 @@
-<nav class="navbar navbar-dark bg-dark fixed-top">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#"> Resource Management System</a>
+<div id="navbar" class="navbar-container bg-dark vh-100 position-fixed">
+  <div
+    class="d-flex flex-column align-items-start text-white p-3 w-100 position-relative"
+  >
     <button
-      class="navbar-toggler"
-      type="button"
-      data-bs-toggle="offcanvas"
-      data-bs-target="#offcanvasDarkNavbar"
-      aria-controls="offcanvasDarkNavbar"
-      aria-label="Toggle navigation"
+      id="toggle-nav-btn"
+      class="btn btn-light position-absolute top-0 end-0 m-2"
     >
-      <span class="navbar-toggler-icon"></span>
+      &times;
     </button>
-    <div
-      class="offcanvas offcanvas-end text-bg-dark"
-      tabindex="-1"
-      id="offcanvasDarkNavbar"
-      aria-labelledby="offcanvasDarkNavbarLabel"
-    >
-      <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">
-          Resource Management System
-        </h5>
-        <button
-          type="button"
-          class="btn-close btn-close-white"
-          data-bs-dismiss="offcanvas"
-          aria-label="Close"
-        ></button>
-      </div>
-      <div class="offcanvas-body">
-        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-          <li class="nav-item">
+    <!-- <a class="navbar-brand" href="#">Resource Management System</a> -->
+    <ul class="nav flex-column w-100">
+      <li class="nav-item mt-4">
+        <a class="nav-link text-white" href="/WebContent/index.html">
+          <i class="fas fa-tachometer-alt"></i>
+          <span class="nav-text">Dashboard</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a
+          class="nav-link text-white"
+          href="/WebContent/pages/material/materialPage.html"
+        >
+          <i class="fas fa-boxes"></i>
+          <span class="nav-text">자재관리</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a
+          class="nav-link text-white"
+          href="/WebContent/pages/storage/storagePage.html"
+        >
+          <i class="fas fa-warehouse"></i>
+          <span class="nav-text">입고관리</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a
+          class="nav-link text-white"
+          href="/WebContent/pages/retrieval/retrievalPage.html"
+        >
+          <i class="fas fa-dolly"></i>
+          <span class="nav-text">출고관리</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a
+          class="nav-link text-white"
+          href="/WebContent/pages/history/historyPage.html"
+        >
+          <i class="fas fa-history"></i>
+          <span class="nav-text">입출고내역</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a
+          class="nav-link text-white"
+          href="/WebContent/pages/ranking/rankingPage.html"
+        >
+          <i class="fas fa-chart-line"></i>
+          <span class="nav-text">기간별입출고순위</span>
+        </a>
+      </li>
+      <li class="nav-item dropdown">
+        <a
+          class="nav-link dropdown-toggle text-white"
+          href="#"
+          role="button"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+        >
+          <i class="fas fa-cubes"></i>
+          <span class="nav-text">재고관리</span>
+        </a>
+        <ul class="dropdown-menu dropdown-menu-dark">
+          <li>
             <a
-              class="nav-link active"
-              aria-current="page"
-              href="/WebContent/index.html"
-              >Dashboard</a
+              class="dropdown-item"
+              href="/WebContent/pages/stock/stockStatus/stockStatusPage.html"
+              >재고 현황</a
             >
           </li>
-          <li class="nav-item">
+          <li>
             <a
-              class="nav-link"
-              href="/WebContent/pages/material/materialPage.html"
-              >자재관리</a
+              class="dropdown-item"
+              href="/WebContent/pages/stock/stockManagementPage.html"
+              >재고 조정</a
             >
           </li>
-          <li class="nav-item">
+          <li>
             <a
-              class="nav-link"
-              href="/WebContent/pages/storage/storagePage.html"
-              >입고관리</a
+              class="dropdown-item"
+              href="/WebContent/pages/stock/stockHistoryPage.html"
+              >재고 조정 내역</a
             >
-          </li>
-          <li class="nav-item">
-            <a
-              class="nav-link"
-              href="/WebContent/pages/retrieval/retrievalPage.html"
-              >출고관리</a
-            >
-          </li>
-          <li class="nav-item">
-            <a
-              class="nav-link"
-              href="/WebContent/pages/history/historyPage.html"
-              >입출고내역</a
-            >
-          </li>
-          <li class="nav-item">
-            <a
-              class="nav-link"
-              href="/WebContent/pages/ranking/rankingPage.html"
-              >기간별입출고순위</a
-            >
-          </li>
-          <li class="nav-item dropdown">
-            <a
-              class="nav-link dropdown-toggle"
-              href="#"
-              role="button"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-            >
-              재고관리
-            </a>
-            <ul class="dropdown-menu dropdown-menu-dark">
-              <li>
-                <a
-                  class="dropdown-item"
-                  href="/WebContent/pages/stock/stockStatus/stockStatusPage.html"
-                  >재고 현황</a
-                >
-              </li>
-              <li>
-                <a
-                  class="dropdown-item"
-                  href="/WebContent/pages/stock/stockManagementPage.html"
-                  >재고 조정</a
-                >
-              </li>
-              <li>
-                <a
-                  class="dropdown-item"
-                  href="/WebContent/pages/stock/stockHistoryPage.html"
-                  >재고 조정 내역</a
-                >
-              </li>
-            </ul>
-          </li>
-
-          <li class="nav-item dropdown">
-            <a
-              class="nav-link dropdown-toggle"
-              href="#"
-              role="button"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-            >
-              창고관리
-            </a>
-            <ul class="dropdown-menu dropdown-menu-dark">
-              <li>
-                <a
-                  class="dropdown-item"
-                  href="/WebContent/pages/warehouse/warehouseSetting/warehouseSettingPage.html"
-                  >창고 설정</a
-                >
-              </li>
-              <li>
-                <a
-                  class="dropdown-item"
-                  href="/WebContent/pages/warehouse/warehouseStatus/warehouseStatusPage.html"
-                  >창고 현황</a
-                >
-              </li>
-            </ul>
           </li>
         </ul>
-      </div>
-    </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a
+          class="nav-link dropdown-toggle text-white"
+          href="#"
+          role="button"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+        >
+          <i class="fas fa-warehouse"></i>
+          <span class="nav-text">창고관리</span>
+        </a>
+        <ul class="dropdown-menu dropdown-menu-dark">
+          <li>
+            <a
+              class="dropdown-item"
+              href="/WebContent/pages/warehouse/warehouseSetting/warehouseSettingPage.html"
+              >창고 설정</a
+            >
+          </li>
+          <li>
+            <a
+              class="dropdown-item"
+              href="/WebContent/pages/warehouse/warehouseStatus/warehouseStatusPage.html"
+              >창고 현황</a
+            >
+          </li>
+        </ul>
+      </li>
+    </ul>
   </div>
-</nav>
+</div>
