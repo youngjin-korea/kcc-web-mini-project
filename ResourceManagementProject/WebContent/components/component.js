@@ -19,22 +19,25 @@ class customNav extends HTMLElement {
         <ul style="list-style: none; margin: 0; padding: 0">
           <li>menu</li>
           <li>
-            <a style="padding: 1rem 2rem; display: block" href="">Dashboard</a>
+            <a style="padding: 1rem 2rem; display: block" href="/pages/material/materialPage.html">자재관리</a>
+          </li>
+          <li>
+            <a style="padding: 1rem 2rem; display: block" href="">입고관리</a>
+          </li>
+          <li>
+            <a style="padding: 1rem 2rem; display: block" href="">출고관리</a>
+          </li>
+          <li>
+            <a style="padding: 1rem 2rem; display: block" href="">입출고내역</a>
+          </li>
+          <li>
+            <a style="padding: 1rem 2rem; display: block" href="">기간별입출고순위</a>
           </li>
           <li>
             <a style="padding: 1rem 2rem; display: block" href="">재고관리</a>
           </li>
           <li>
-            <a style="padding: 1rem 2rem; display: block" href="">재고관리</a>
-          </li>
-          <li>
-            <a style="padding: 1rem 2rem; display: block" href="">재고관리</a>
-          </li>
-          <li>
-            <a style="padding: 1rem 2rem; display: block" href="">재고관리</a>
-          </li>
-          <li>
-            <a style="padding: 1rem 2rem; display: block" href="">재고관리</a>
+            <a style="padding: 1rem 2rem; display: block" href="">창고관리</a>
           </li>
         </ul>
       </nav>`;
