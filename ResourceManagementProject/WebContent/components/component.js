@@ -3,7 +3,7 @@ class customHeader extends HTMLElement {
     this.innerHTML = `<header style="padding: 1rem; background-color: beige">
       <div style="display: flex">
         <div id="ham" class="toggle-btn" style="margin-right: 0.5rem">
-          <a href="">햄버거 버튼</a>
+          <a href="#"><i class="fi fi-br-menu-burger"></i></a>
         </div>
         <div><a href="">kcc마크</a></div>
       </div>
