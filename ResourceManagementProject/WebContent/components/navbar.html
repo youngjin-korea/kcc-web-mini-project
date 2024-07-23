@@ -1,0 +1,142 @@
+<nav class="navbar navbar-dark bg-dark fixed-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#"> Resource Management System</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="offcanvas"
+      data-bs-target="#offcanvasDarkNavbar"
+      aria-controls="offcanvasDarkNavbar"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div
+      class="offcanvas offcanvas-end text-bg-dark"
+      tabindex="-1"
+      id="offcanvasDarkNavbar"
+      aria-labelledby="offcanvasDarkNavbarLabel"
+    >
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">
+          Resource Management System
+        </h5>
+        <button
+          type="button"
+          class="btn-close btn-close-white"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+          <li class="nav-item">
+            <a
+              class="nav-link active"
+              aria-current="page"
+              href="/WebContent/index.html"
+              >Dashboard</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              href="/WebContent/pages/material/materialPage.html"
+              >자재관리</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              href="/WebContent/pages/storage/storagePage.html"
+              >입고관리</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              href="/WebContent/pages/retrieval/retrievalPage.html"
+              >출고관리</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              href="/WebContent/pages/history/historyPage.html"
+              >입출고내역</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              href="/WebContent/pages/ranking/rankingPage.html"
+              >기간별입출고순위</a
+            >
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              재고관리
+            </a>
+            <ul class="dropdown-menu dropdown-menu-dark">
+              <li>
+                <a
+                  class="dropdown-item"
+                  href="/WebContent/pages/stock/stockStatus/stockStatusPage.html"
+                  >재고 현황</a
+                >
+              </li>
+              <li>
+                <a
+                  class="dropdown-item"
+                  href="/WebContent/pages/stock/stockManagementPage.html"
+                  >재고 조정</a
+                >
+              </li>
+              <li>
+                <a
+                  class="dropdown-item"
+                  href="/WebContent/pages/stock/stockHistoryPage.html"
+                  >재고 조정 내역</a
+                >
+              </li>
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              창고관리
+            </a>
+            <ul class="dropdown-menu dropdown-menu-dark">
+              <li>
+                <a
+                  class="dropdown-item"
+                  href="/WebContent/pages/warehouse/warehouseSetting/warehouseSettingPage.html"
+                  >창고 설정</a
+                >
+              </li>
+              <li>
+                <a
+                  class="dropdown-item"
+                  href="/WebContent/pages/warehouse/warehouseStatus/warehouseStatusPage.html"
+                  >창고 현황</a
+                >
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
