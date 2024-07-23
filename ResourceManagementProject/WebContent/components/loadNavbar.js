@@ -9,7 +9,6 @@ document.addEventListener("DOMContentLoaded", function () {
       toggleButton.addEventListener("click", function () {
         const navbar = document.getElementById("navbar");
         const content = document.querySelector(".content");
-
         navbar.classList.toggle("collapsed");
 
         if (navbar.classList.contains("collapsed")) {
