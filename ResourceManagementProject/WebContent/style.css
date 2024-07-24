@@ -1,16 +1,11 @@
+@import url("reset.css");
+
 body {
   display: flex;
   flex-direction: column;
   height: 100vh;
   margin: 0;
 }
-
-/* .header-container header {
-  flex: 0 0 auto;
-  position: fixed;
-  left: 0;
-  right: 0;
-} */
 
 .header-container {
   top: 0;
@@ -23,7 +18,7 @@ body {
   transition: width 0.3s;
   overflow: hidden;
   position: relative;
-  margin-top: 5.12rem;
+  margin-top: 52.22px;
 }
 
 .navbar-container.collapsed {
@@ -47,7 +42,7 @@ body {
 .content {
   flex: 1 0 auto;
   margin-left: 250px;
-  margin-top: 80px;
+  margin-top: 50px;
   transition: margin-left 0.3s;
 }
 
@@ -60,11 +55,31 @@ body {
 }
 
 #toggle-nav-btn {
-  top: 10px;
-  right: 10px;
-  border-radius: 50%;
+  top: 20px;
+  right: 35px;
+  border-radius: 5%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .nav-icon {
-  font-size: 1.5rem; /* 원하는 크기로 변경 */
+  font-size: 1.5rem;
+  margin-right: 5px;
+}
+
+.nav-text {
+  font-size: 1.2rem;
+}
+
+.navbar-container {
+  position: relative;
+  z-index: 1000;
+  overflow: visible; /* 수정: overflow 속성을 visible로 설정 */
+}
+
+.dropdown-menu {
+  z-index: 1050;
 }
