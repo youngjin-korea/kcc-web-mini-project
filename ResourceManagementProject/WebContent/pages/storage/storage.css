@@ -2,7 +2,9 @@ main {
   padding: 0.3rem;
   font-size: 1.125rem;
 }
-
+body {
+  min-width: 1030px;
+}
 header {
   padding: 0.9rem;
   font-weight: 600;
@@ -14,16 +16,20 @@ header {
 /* id list */
 #list {
   overflow-x: auto;
+  margin-bottom: 1.5rem;
 }
 #list-s {
-  overflow-x: auto;
+  overflow-y: auto;
+  max-height: 40rem;
+  width: 46rem;
 }
 #table-s {
   /* width: 5rem; */
 }
 /* controll */
-#controll {
+#control div {
   /* width: 300rem; */
+  margin: 1rem 0;
 }
 
 table {
