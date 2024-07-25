@@ -35,8 +35,9 @@ h3 {
   display: flex;
   gap: 20px;
   margin-bottom: 1rem;
-  border: 1px solid black;
+  border: 1px solid #dee2e6;
   border-radius: 3px;
+  background-color: white;
   align-items: center;
   padding: 0.5rem;
 }
@@ -62,9 +63,10 @@ h3 {
 #list {
   overflow-x: auto;
   margin-bottom: 1.5rem;
-  border: 1px solid black;
+  border: 1px solid #dee2e6;
   border-radius: 3px;
   padding: 0.5rem;
+  background-color: white;
 }
 #list-s {
   overflow-y: auto;
@@ -74,9 +76,10 @@ h3 {
 
 /* controll */
 #control {
-  border: 1px solid black;
+  border: 1px solid #dee2e6;
   border-radius: 3px;
   padding: 0.5rem;
+  background-color: white;
 }
 #control div {
   /* width: 300rem; */
