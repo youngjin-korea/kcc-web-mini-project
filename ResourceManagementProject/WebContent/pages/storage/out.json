@@ -6,7 +6,9 @@
     "manufacturer": "제조사Y",
     "specification": "규격A",
     "usage": "사용처1",
-    "currentStock": 100
+    "currentStock": 100,
+    "entryDate": "2024-05-05",
+    "barcodeNumber": "24050500001"
   },
   {
     "warehouseNumber": "002",
@@ -15,7 +17,9 @@
     "manufacturer": "제조사Z",
     "specification": "규격B",
     "usage": "사용처2",
-    "currentStock": 50
+    "currentStock": 50,
+    "entryDate": "2024-05-06",
+    "barcodeNumber": "24050600002"
   },
   {
     "warehouseNumber": "003",
@@ -24,7 +28,9 @@
     "manufacturer": "제조사X",
     "specification": "규격C",
     "usage": "사용처3",
-    "currentStock": 200
+    "currentStock": 200,
+    "entryDate": "2024-05-07",
+    "barcodeNumber": "24050700003"
   },
   {
     "warehouseNumber": "004",
@@ -33,7 +39,9 @@
     "manufacturer": "제조사Y",
     "specification": "규격D",
     "usage": "사용처4",
-    "currentStock": 75
+    "currentStock": 75,
+    "entryDate": "2024-05-08",
+    "barcodeNumber": "24050800004"
   },
   {
     "warehouseNumber": "005",
@@ -42,7 +50,9 @@
     "manufacturer": "제조사Z",
     "specification": "규격E",
     "usage": "사용처5",
-    "currentStock": 30
+    "currentStock": 30,
+    "entryDate": "2024-05-09",
+    "barcodeNumber": "24050900005"
   },
   {
     "warehouseNumber": "006",
@@ -51,7 +61,9 @@
     "manufacturer": "제조사X",
     "specification": "규격F",
     "usage": "사용처6",
-    "currentStock": 150
+    "currentStock": 150,
+    "entryDate": "2024-05-10",
+    "barcodeNumber": "24051000006"
   },
   {
     "warehouseNumber": "007",
@@ -60,7 +72,9 @@
     "manufacturer": "제조사Y",
     "specification": "규격G",
     "usage": "사용처7",
-    "currentStock": 80
+    "currentStock": 80,
+    "entryDate": "2024-05-11",
+    "barcodeNumber": "24051100007"
   },
   {
     "warehouseNumber": "008",
@@ -69,7 +83,9 @@
     "manufacturer": "제조사Z",
     "specification": "규격H",
     "usage": "사용처8",
-    "currentStock": 120
+    "currentStock": 120,
+    "entryDate": "2024-05-12",
+    "barcodeNumber": "24051200008"
   },
   {
     "warehouseNumber": "009",
@@ -78,7 +94,9 @@
     "manufacturer": "제조사X",
     "specification": "규격I",
     "usage": "사용처9",
-    "currentStock": 95
+    "currentStock": 95,
+    "entryDate": "2024-05-13",
+    "barcodeNumber": "24051300009"
   },
   {
     "warehouseNumber": "010",
@@ -87,6 +105,8 @@
     "manufacturer": "제조사Y",
     "specification": "규격J",
     "usage": "사용처10",
-    "currentStock": 65
+    "currentStock": 65,
+    "entryDate": "2024-05-14",
+    "barcodeNumber": "24051400010"
   }
 ]
