@@ -59,16 +59,11 @@ async function loadMaterialData() {
 
     materialData.forEach((material) => {
       const row = document.createElement("tr");
-
       Object.keys(material).forEach((key) => {
-        if (key !== "storageMethod") {
-          // 'storageMethod'를 제외하고 테이블에 표시
-          const cell = document.createElement("td");
-          cell.textContent = material[key];
-          row.appendChild(cell);
-        }
+        const cell = document.createElement("td");
+        cell.textContent = material[key];
+        row.appendChild(cell);
       });
-
       tableBody.appendChild(row);
     });
   } catch (error) {
@@ -100,12 +95,9 @@ function searchItem() {
         const row = document.createElement("tr");
 
         Object.keys(material).forEach((key) => {
-          if (key !== "storageMethod") {
-            // 'storageMethod'를 제외하고 테이블에 표시
-            const cell = document.createElement("td");
-            cell.textContent = material[key];
-            row.appendChild(cell);
-          }
+          const cell = document.createElement("td");
+          cell.textContent = material[key];
+          row.appendChild(cell);
         });
 
         tableBody.appendChild(row);
