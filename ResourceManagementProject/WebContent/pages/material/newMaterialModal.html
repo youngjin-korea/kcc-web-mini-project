@@ -1,0 +1,116 @@
+<!-- Modal -->
+<div
+  class="modal fade"
+  id="createMaterialModal"
+  tabindex="-1"
+  aria-labelledby="createMaterialModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="createMaterialModalLabel">
+          신규 자재 생성
+        </h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <form id="createMaterialForm">
+          <div class="mb-3">
+            <label for="materialNameInput" class="form-label">자재명</label>
+            <input
+              type="text"
+              class="form-control"
+              id="materialNameInput"
+              placeholder="자재명 입력"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="modelNameInput" class="form-label">모델명</label>
+            <input
+              type="text"
+              class="form-control"
+              id="modelNameInput"
+              placeholder="모델명 입력"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="manufacturerInput" class="form-label">제조사</label>
+            <input
+              type="text"
+              class="form-control"
+              id="manufacturerInput"
+              placeholder="제조사 입력"
+            />
+          </div>
+          <div class="mb-3">
+            <select class="form-select" aria-label="카테고리">
+              <option selected disabled>카테고리 선택</option>
+              <option value="1">청과</option>
+              <option value="2">정육</option>
+              <option value="3">음료</option>
+              <option value="4">의류</option>
+              <option value="5">가구</option>
+              <option value="6">사무용품</option>
+              <option value="7">전자기기</option>
+              <option value="8">기타</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <select class="form-select" aria-label="규격">
+              <option selected disabled>규격 선택</option>
+              <option value="1">EA</option>
+              <option value="2">BOX</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <label for="newCustomRangeweight" class="form-label"
+              >규격 당 무게</label
+            >
+            <span id="newRangeValue" style="font-weight: bold; color: #0d6efd"
+              >50</span
+            >
+            <input
+              type="range"
+              class="form-range"
+              id="newCustomRangeweight"
+              min="0"
+              max="100"
+            />
+            <label style="margin-bottom: 5px">직접 입력</label>
+            <input
+              class="form-control"
+              type="number"
+              id="newCustomNumber"
+              min="0"
+              max="100"
+              value="50"
+              oninput="newUpdateValueFromNumber(this.value)"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="usageInput" class="form-label">사용처</label>
+            <textarea class="form-control" id="usageInput" rows="3"></textarea>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+          닫기
+        </button>
+        <button
+          type="button"
+          class="btn btn-primary"
+          onclick="createMaterial()"
+        >
+          등록
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

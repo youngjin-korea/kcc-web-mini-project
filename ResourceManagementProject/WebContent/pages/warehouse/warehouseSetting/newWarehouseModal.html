@@ -1,0 +1,84 @@
+<!-- modal.html -->
+<div
+  class="modal fade"
+  id="createWarehouseModal"
+  tabindex="-1"
+  aria-labelledby="createWarehouseModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="createWarehouseModalLabel">
+          신규 창고 생성
+        </h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <form id="createWarehouseForm">
+          <div class="mb-3">
+            <label for="newWarehouseCode" class="form-label">창고 코드</label>
+            <input
+              type="text"
+              class="form-control"
+              id="newWarehouseCode"
+              required
+            />
+          </div>
+          <div class="mb-3">
+            <label for="newWarehouseName" class="form-label">창고 이름</label>
+            <input
+              type="text"
+              class="form-control"
+              id="newWarehouseName"
+              required
+            />
+          </div>
+          <div class="mb-3">
+            <label for="newWarehouseLocation" class="form-label"
+              >창고 위치</label
+            >
+            <input
+              type="text"
+              class="form-control"
+              id="newWarehouseLocation"
+              required
+            />
+          </div>
+          <div class="col selectRange">
+            <span class="col-2">가로</span>
+            <input
+              type="number"
+              class="form-control numberInputSize"
+              id="rowNumber"
+              placeholder="가로 크기"
+              min="1"
+            />
+            <span class="col-2">세로</span>
+            <input
+              type="number"
+              class="form-control numberInputSize"
+              id="colNumber"
+              placeholder="세로 크기"
+              min="1"
+            />
+          </div>
+          <div class="mb-5 mt-3">
+            <select class="form-select" id="newWarehouseCategory" required>
+              <option value="" disabled selected>창고 종류 선택</option>
+              <option value="상온">상온</option>
+              <option value="냉장">냉장</option>
+            </select>
+          </div>
+
+          <button type="submit" class="btn btn-primary">저장</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
