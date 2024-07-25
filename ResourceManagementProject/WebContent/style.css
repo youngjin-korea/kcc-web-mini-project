@@ -7,13 +7,6 @@ body {
   margin: 0;
 }
 
-/* .header-container header {
-  flex: 0 0 auto;
-  position: fixed;
-  left: 0;
-  right: 0;
-} */
-
 .header-container {
   top: 0;
   position: fixed;
@@ -79,4 +72,14 @@ body {
 
 .nav-text {
   font-size: 1.2rem;
+}
+
+.navbar-container {
+  position: relative;
+  z-index: 1000;
+  overflow: visible; /* 수정: overflow 속성을 visible로 설정 */
+}
+
+.dropdown-menu {
+  z-index: 1050;
 }
