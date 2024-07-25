@@ -1,22 +1,33 @@
 <!-- navbar.html -->
-<div id="navbar" class="navbar-container bg-black vh-100 position-fixed top-0">
+<div
+  id="navbar"
+  class="navbar-container vh-100 position-fixed top-0"
+  style="
+    border-right: 1px solid #dee2e6;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1);
+  "
+>
   <div
-    class="d-flex flex-column align-items-start text-white pt-5 w-100 position-relative"
+    class="d-flex flex-column align-items-start pt-5 w-100 position-relative"
     style="z-index: 1000; overflow: visible"
   >
-    <button id="toggle-nav-btn" class="btn btn-light position-absolute top-10">
+    <button
+      id="toggle-nav-btn"
+      class="btn btn-light position-absolute top-10"
+      style="background-color: #dee2e6; border-radius: 5px"
+    >
       &times;
     </button>
     <ul class="nav flex-column w-100">
       <li class="nav-item mt-4 m-2">
-        <a class="nav-link text-white" href="/WebContent/index.html">
+        <a class="nav-link text-black" href="/WebContent/index.html">
           <i class="fas fa-tachometer-alt nav-icon"></i>
           <span class="nav-text">Dashboard</span>
         </a>
       </li>
       <li class="nav-item m-2">
         <a
-          class="nav-link text-white"
+          class="nav-link text-black"
           href="/WebContent/pages/material/materialPage.html"
         >
           <i class="fas fa-boxes nav-icon"></i>
@@ -25,7 +36,7 @@
       </li>
       <li class="nav-item m-2">
         <a
-          class="nav-link text-white"
+          class="nav-link text-black"
           href="/WebContent/pages/storage/storagePage.html"
         >
           <i class="fas fa-warehouse nav-icon"></i>
@@ -34,7 +45,7 @@
       </li>
       <li class="nav-item m-2">
         <a
-          class="nav-link text-white"
+          class="nav-link text-black"
           href="/WebContent/pages/retrieval/retrievalPage.html"
         >
           <i class="fas fa-dolly nav-icon"></i>
@@ -43,7 +54,7 @@
       </li>
       <li class="nav-item m-2">
         <a
-          class="nav-link text-white"
+          class="nav-link text-black"
           href="/WebContent/pages/history/historyPage.html"
         >
           <i class="fas fa-history nav-icon"></i>
@@ -52,7 +63,7 @@
       </li>
       <li class="nav-item m-2">
         <a
-          class="nav-link text-white"
+          class="nav-link text-black"
           href="/WebContent/pages/ranking/rankingPage.html"
         >
           <i class="fas fa-chart-line nav-icon"></i>
@@ -61,7 +72,7 @@
       </li>
       <li class="nav-item dropdown dropend m-2">
         <a
-          class="nav-link dropdown-toggle text-white"
+          class="nav-link text-black dropdown-toggle"
           href="#"
           role="button"
           data-bs-toggle="dropdown"
@@ -73,21 +84,21 @@
         <ul class="dropdown-menu dropdown-menu-dark">
           <li>
             <a
-              class="dropdown-item"
+              class="dropdown-item text-white"
               href="/WebContent/pages/stock/stockStatus/stockStatusPage.html"
               >재고 현황</a
             >
           </li>
           <li>
             <a
-              class="dropdown-item"
+              class="dropdown-item text-white"
               href="/WebContent/pages/stock/stockManagementPage.html"
               >재고 조정</a
             >
           </li>
           <li>
             <a
-              class="dropdown-item"
+              class="dropdown-item text-white"
               href="/WebContent/pages/stock/stockHistoryPage.html"
               >재고 조정 내역</a
             >
@@ -96,7 +107,7 @@
       </li>
       <li class="nav-item dropdown dropend m-2">
         <a
-          class="nav-link dropdown-toggle text-white"
+          class="nav-link dropdown-toggle text-black"
           href="#"
           role="button"
           data-bs-toggle="dropdown"
@@ -108,14 +119,14 @@
         <ul class="dropdown-menu dropdown-menu-dark">
           <li>
             <a
-              class="dropdown-item"
+              class="dropdown-item text-white"
               href="/WebContent/pages/warehouse/warehouseSetting/warehouseSettingPage.html"
               >창고 설정</a
             >
           </li>
           <li>
             <a
-              class="dropdown-item"
+              class="dropdown-item text-white"
               href="/WebContent/pages/warehouse/warehouseStatus/warehouseStatusPage.html"
               >창고 현황</a
             >
