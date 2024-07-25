@@ -86,3 +86,39 @@ function newUpdateValueFromNumber(value) {
   document.getElementById("newRangeValue").innerText = value;
   document.getElementById("newCustomRangeweight").value = value;
 }
+
+// 검색기능
+// function searchItem() {
+//   const modelName = document
+//     .getElementById("searchModelName")
+//     .value.toLowerCase();
+//   const materialName = document
+//     .getElementById("searchMaterialName")
+//     .value.toLowerCase();
+
+//   fetch("../../data/material.json")
+//     .then((response) => response.json())
+//     .then((materialData) => {
+//       const filteredData = materialData.filter(
+//         (material) =>
+//           material.modelName.toLowerCase().includes(modelName) &&
+//           material.materialName.toLowerCase().includes(materialName)
+//       );
+
+//       const tableBody = document.getElementById("materialTableBody");
+//       tableBody.innerHTML = "";
+
+//       filteredData.forEach((material) => {
+//         const row = document.createElement("tr");
+
+//         Object.keys(material).forEach((key) => {
+//           const cell = document.createElement("td");
+//           cell.textContent = material[key];
+//           row.appendChild(cell);
+//         });
+
+//         tableBody.appendChild(row);
+//       });
+//     })
+//     .catch((error) => console.error("Error filtering material data:", error));
+// }
