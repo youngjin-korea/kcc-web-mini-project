@@ -38,8 +38,8 @@
       <div class="container m-2">
         <div id="searchBox" class="form-row mb-3">
           <div class="row">
-            <div class="col-2">모델명</div>
-            <div class="col-4">
+            <div class="col-1 p-0">모델명</div>
+            <div class="col-3">
               <input
                 type="text"
                 class="form-control"
@@ -47,14 +47,31 @@
                 placeholder="모델명"
               />
             </div>
-            <div class="col-2">자재명</div>
-            <div class="col-4 pe-2">
+            <div class="col-1 p-0">자재명</div>
+            <div class="col-3 pe-2">
               <input
                 type="text"
                 class="form-control"
                 id="searchMaterialName"
                 placeholder="자재명"
               />
+            </div>
+            <div class="col-3">
+              <select
+                class="form-select"
+                id="categorySelect"
+                aria-label="카테고리"
+              >
+                <option selected disabled>카테고리 선택</option>
+                <option value="청과">청과</option>
+                <option value="정육">정육</option>
+                <option value="음료">음료</option>
+                <option value="의류">의류</option>
+                <option value="가구">가구</option>
+                <option value="사무용품">사무용품</option>
+                <option value="전자기기">전자기기</option>
+                <option value="기타">기타</option>
+              </select>
             </div>
           </div>
           <div id="btnGroup" class="col-3">
