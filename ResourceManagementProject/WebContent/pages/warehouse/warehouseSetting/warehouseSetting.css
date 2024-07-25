@@ -7,6 +7,7 @@
   border-radius: 0.375rem;
   padding-top: 3px;
   padding-bottom: 3px;
+  background-color: white;
 }
 
 #btnGroup {
@@ -22,6 +23,7 @@
   border: 1px solid #dee2e6;
   border-radius: 0.375rem;
   padding: 20px;
+  background-color: white;
 }
 
 #settingArea div {

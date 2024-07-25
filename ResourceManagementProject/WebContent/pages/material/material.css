@@ -7,6 +7,7 @@
   border-radius: 0.375rem;
   padding-top: 3px;
   padding-bottom: 3px;
+  background-color: white;
 }
 
 #btnGroup {
@@ -19,9 +20,11 @@
 }
 
 #settingArea {
+  background-color: white;
   border: 1px solid #dee2e6;
   border-radius: 0.375rem;
   padding: 20px;
+  margin-left: 30px;
 }
 
 #settingArea div {
@@ -37,11 +40,13 @@
 
 .material-table-container {
   max-height: 500px;
+  max-width: max-content;
   overflow-y: auto;
+  overflow-x: auto;
   position: relative;
 }
 .material-table-container table {
-  width: 100%;
+  width: max-content;
   table-layout: fixed;
 }
 .material-table-container thead {
