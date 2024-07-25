@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="UTF-8" />
-    <title>Index Page</title>
+    <title>입고관리</title>
     <script type="text/javascript" src="../../app.js"></script>
     <script
       type="text/javascript"
@@ -19,7 +19,6 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="../../style.css" />
-
     <link rel="stylesheet" href="storage.css" />
     <link
       rel="stylesheet"
@@ -33,173 +32,90 @@
     <div id="navbar-container"></div>
     <div class="content p-3">
       <main>
-        <header>출고관리 |</header>
         <div id="body">
-          <div id="list">
-            <table>
-              <thead>
-                <tr>
-                  <th>no.</th>
-                  <th>창고번호</th>
-                  <th>자재명</th>
-                  <th>모델명</th>
-                  <th>제조사</th>
-                  <th>규격</th>
-                  <th>사용처</th>
-                  <th>재고</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>1</td>
-                  <td>001</td>
-                  <td>자재A</td>
-                  <td>모델X</td>
-                  <td>제조사Y</td>
-                  <td>규격A</td>
-                  <td>사용처1</td>
-                  <td>100</td>
-                </tr>
-                <tr>
-                  <td>2</td>
-                  <td>002</td>
-                  <td>자재B</td>
-                  <td>모델Y</td>
-                  <td>제조사Z</td>
-                  <td>규격B</td>
-                  <td>사용처2</td>
-                  <td>50</td>
-                </tr>
-              </tbody>
-            </table>
+          <div
+            style="
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+            "
+          >
+            <header>입고관리 |</header>
           </div>
-          <div id="control">
-            <h3>출고관리 상세정보</h3>
-            <div>
-              <button>출고완료</button>
+
+          <div id="searchBar">
+            <label for="model-name"
+              >모델명: <input id="model-name" type="text"
+            /></label>
+            <label for="material-name"
+              >자재명: <input id="material-name" type="text"
+            /></label>
+            <input type="button" value="검색" class="btn btn-primary" />
+          </div>
+          <div id="content">
+            <div id="list">
+              <div id="list-header">
+                <h3>자재 및 재고</h3>
+                <button
+                  class="btn btn-success"
+                  data-bs-toggle="modal"
+                  data-bs-target="#createMaterialModal"
+                >
+                  신규 자재 생성
+                </button>
+              </div>
+              <!--  -->
+              <div class="table-container">
+                <table id="dataTable">
+                  <thead>
+                    <tr>
+                      <th>창고번호</th>
+                      <th>자재명</th>
+                      <th>모델명</th>
+                      <th>제조사</th>
+                      <th>규격</th>
+                      <th>사용처</th>
+                      <th>현 재고</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <!-- 데이터가 여기에 추가됩니다 -->
+                  </tbody>
+                </table>
+              </div>
+              <!--  -->
             </div>
-            <div id="list-s">
-              <table id="table-s">
-                <thead>
-                  <tr>
-                    <th>no.</th>
-                    <th>입고일자</th>
-                    <th>바코드</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>1</td>
-                    <td>001</td>
-                    <td>자재A</td>
-                  </tr>
-                  <tr>
-                    <td>2</td>
-                    <td>002</td>
-                    <td>자재B</td>
-                  </tr>
-                  <tr>
-                    <td>2</td>
-                    <td>002</td>
-                    <td>자재B</td>
-                  </tr>
-                  <tr>
-                    <td>2</td>
-                    <td>002</td>
-                    <td>자재B</td>
-                  </tr>
-                  <tr>
-                    <td>2</td>
-                    <td>002</td>
-                    <td>자재B</td>
-                  </tr>
-                  <tr>
-                    <td>2</td>
-                    <td>002</td>
-                    <td>자재B</td>
-                  </tr>
-                  <tr>
-                    <td>2</td>
-                    <td>002</td>
-                    <td>자재B</td>
-                  </tr>
-                  <tr>
-                    <td>2</td>
-                    <td>002</td>
-                    <td>자재B</td>
-                  </tr>
-                  <tr>
-                    <td>2</td>
-                    <td>002</td>
-                    <td>자재B</td>
-                  </tr>
-                  <tr>
-                    <td>2</td>
-                    <td>002</td>
-                    <td>자재B</td>
-                  </tr>
-                  <tr>
-                    <td>2</td>
-                    <td>002</td>
-                    <td>자재B</td>
-                  </tr>
-                  <tr>
-                    <td>2</td>
-                    <td>002</td>
-                    <td>자재B</td>
-                  </tr>
-                  <tr>
-                    <td>2</td>
-                    <td>002</td>
-                    <td>자재B</td>
-                  </tr>
-                  <tr>
-                    <td>2</td>
-                    <td>002</td>
-                    <td>자재B</td>
-                  </tr>
-                  <tr>
-                    <td>2</td>
-                    <td>002</td>
-                    <td>자재B</td>
-                  </tr>
-                  <tr>
-                    <td>2</td>
-                    <td>002</td>
-                    <td>자재B</td>
-                  </tr>
-                  <tr>
-                    <td>2</td>
-                    <td>002</td>
-                    <td>자재B</td>
-                  </tr>
-                  <tr>
-                    <td>2</td>
-                    <td>002</td>
-                    <td>자재B</td>
-                  </tr>
-                  <tr>
-                    <td>2</td>
-                    <td>002</td>
-                    <td>자재B</td>
-                  </tr>
-                  <tr>
-                    <td>2</td>
-                    <td>002</td>
-                    <td>자재B</td>
-                  </tr>
-                  <tr>
-                    <td>2</td>
-                    <td>002</td>
-                    <td>자재B</td>
-                  </tr>
-                  <tr>
-                    <td>2</td>
-                    <td>002</td>
-                    <td>자재B</td>
-                  </tr>
-                </tbody>
-              </table>
+            <div id="control">
+              <h3>입고관리 상세정보</h3>
+              <div class="controlBtn">
+                <div class="start">
+                  수량입력: <input type="text" placeholder=" 0" />
+                  <button class="btn btn-primary">입고완료</button>
+                </div>
+              </div>
+              <div id="list-s">
+                <table id="table-s">
+                  <thead>
+                    <tr>
+                      <th>no.</th>
+                      <th>입고일자</th>
+                      <th>바코드 번호</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>1</td>
+                      <td>2024-07-07</td>
+                      <td>2405660000</td>
+                    </tr>
+                    <tr>
+                      <td>1</td>
+                      <td>2024-07-07</td>
+                      <td>2405660000</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
           </div>
         </div>
@@ -210,5 +126,6 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+    <script src="./storage.js"></script>
   </body>
 </html>
