@@ -38,6 +38,7 @@ function newUpdateValueFromRange(value) {
   document.getElementById("newCustomNumber").value = value;
 }
 
+// 모달창용 값 변경 함수
 function newUpdateValueFromNumber(value) {
   if (value < 0) value = 0;
   if (value > 100) value = 100;
