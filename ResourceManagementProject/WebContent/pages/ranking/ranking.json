@@ -1,0 +1,362 @@
+[
+  {
+    "rack": "WH01-0",
+    "itemName": "자재명 A",
+    "modelName": "모델명 A",
+    "manufacturer": "제조사 A",
+    "usage": "회사 A",
+    "date": "2024-01-15",
+    "specification": "BOX",
+    "quantity": 78
+  },
+  {
+    "rack": "WH01-1",
+    "itemName": "자재명 B",
+    "modelName": "모델명 B",
+    "manufacturer": "제조사 B",
+    "usage": "회사 B",
+    "date": "2024-02-20",
+    "specification": "EA",
+    "quantity": 42
+  },
+  {
+    "rack": "WH01-2",
+    "itemName": "자재명 C",
+    "modelName": "모델명 C",
+    "manufacturer": "제조사 C",
+    "usage": "회사 C",
+    "date": "2024-03-25",
+    "specification": "BOX",
+    "quantity": 55
+  },
+  {
+    "rack": "WH01-3",
+    "itemName": "자재명 D",
+    "modelName": "모델명 D",
+    "manufacturer": "제조사 D",
+    "usage": "회사 D",
+    "date": "2024-04-30",
+    "specification": "EA",
+    "quantity": 89
+  },
+  {
+    "rack": "WH01-4",
+    "itemName": "자재명 E",
+    "modelName": "모델명 E",
+    "manufacturer": "제조사 E",
+    "usage": "회사 E",
+    "date": "2024-05-10",
+    "specification": "BOX",
+    "quantity": 67
+  },
+  {
+    "rack": "WH01-5",
+    "itemName": "자재명 F",
+    "modelName": "모델명 F",
+    "manufacturer": "제조사 F",
+    "usage": "회사 F",
+    "date": "2024-06-15",
+    "specification": "EA",
+    "quantity": 23
+  },
+  {
+    "rack": "WH01-6",
+    "itemName": "자재명 G",
+    "modelName": "모델명 G",
+    "manufacturer": "제조사 G",
+    "usage": "회사 G",
+    "date": "2024-07-20",
+    "specification": "BOX",
+    "quantity": 91
+  },
+  {
+    "rack": "WH01-7",
+    "itemName": "자재명 H",
+    "modelName": "모델명 H",
+    "manufacturer": "제조사 H",
+    "usage": "회사 H",
+    "date": "2024-08-25",
+    "specification": "EA",
+    "quantity": 37
+  },
+  {
+    "rack": "WH01-8",
+    "itemName": "자재명 I",
+    "modelName": "모델명 I",
+    "manufacturer": "제조사 I",
+    "usage": "회사 I",
+    "date": "2024-09-30",
+    "specification": "BOX",
+    "quantity": 64
+  },
+  {
+    "rack": "WH01-9",
+    "itemName": "자재명 J",
+    "modelName": "모델명 J",
+    "manufacturer": "제조사 J",
+    "usage": "회사 J",
+    "date": "2024-10-10",
+    "specification": "EA",
+    "quantity": 52
+  },
+  {
+    "rack": "WH01-0",
+    "itemName": "자재명 K",
+    "modelName": "모델명 K",
+    "manufacturer": "제조사 K",
+    "usage": "회사 K",
+    "date": "2024-11-15",
+    "specification": "BOX",
+    "quantity": 85
+  },
+  {
+    "rack": "WH01-1",
+    "itemName": "자재명 L",
+    "modelName": "모델명 L",
+    "manufacturer": "제조사 L",
+    "usage": "회사 L",
+    "date": "2024-12-20",
+    "specification": "EA",
+    "quantity": 31
+  },
+  {
+    "rack": "WH01-2",
+    "itemName": "자재명 M",
+    "modelName": "모델명 M",
+    "manufacturer": "제조사 M",
+    "usage": "회사 M",
+    "date": "2024-01-25",
+    "specification": "BOX",
+    "quantity": 76
+  },
+  {
+    "rack": "WH01-3",
+    "itemName": "자재명 N",
+    "modelName": "모델명 N",
+    "manufacturer": "제조사 N",
+    "usage": "회사 N",
+    "date": "2024-02-30",
+    "specification": "EA",
+    "quantity": 45
+  },
+  {
+    "rack": "WH01-4",
+    "itemName": "자재명 O",
+    "modelName": "모델명 O",
+    "manufacturer": "제조사 O",
+    "usage": "회사 O",
+    "date": "2024-03-05",
+    "specification": "BOX",
+    "quantity": 22
+  },
+  {
+    "rack": "WH01-5",
+    "itemName": "자재명 P",
+    "modelName": "모델명 P",
+    "manufacturer": "제조사 P",
+    "usage": "회사 P",
+    "date": "2024-04-10",
+    "specification": "EA",
+    "quantity": 93
+  },
+  {
+    "rack": "WH01-6",
+    "itemName": "자재명 Q",
+    "modelName": "모델명 Q",
+    "manufacturer": "제조사 Q",
+    "usage": "회사 Q",
+    "date": "2024-05-15",
+    "specification": "BOX",
+    "quantity": 57
+  },
+  {
+    "rack": "WH01-7",
+    "itemName": "자재명 R",
+    "modelName": "모델명 R",
+    "manufacturer": "제조사 R",
+    "usage": "회사 R",
+    "date": "2024-06-20",
+    "specification": "EA",
+    "quantity": 39
+  },
+  {
+    "rack": "WH01-8",
+    "itemName": "자재명 S",
+    "modelName": "모델명 S",
+    "manufacturer": "제조사 S",
+    "usage": "회사 S",
+    "date": "2024-07-25",
+    "specification": "BOX",
+    "quantity": 61
+  },
+  {
+    "rack": "WH01-9",
+    "itemName": "자재명 T",
+    "modelName": "모델명 T",
+    "manufacturer": "제조사 T",
+    "usage": "회사 T",
+    "date": "2024-08-30",
+    "specification": "EA",
+    "quantity": 80
+  },
+  {
+    "rack": "WH01-0",
+    "itemName": "자재명 U",
+    "modelName": "모델명 U",
+    "manufacturer": "제조사 U",
+    "usage": "회사 U",
+    "date": "2024-09-10",
+    "specification": "BOX",
+    "quantity": 50
+  },
+  {
+    "rack": "WH01-1",
+    "itemName": "자재명 V",
+    "modelName": "모델명 V",
+    "manufacturer": "제조사 V",
+    "usage": "회사 V",
+    "date": "2024-10-15",
+    "specification": "EA",
+    "quantity": 29
+  },
+  {
+    "rack": "WH01-2",
+    "itemName": "자재명 W",
+    "modelName": "모델명 W",
+    "manufacturer": "제조사 W",
+    "usage": "회사 W",
+    "date": "2024-11-20",
+    "specification": "BOX",
+    "quantity": 72
+  },
+  {
+    "rack": "WH01-3",
+    "itemName": "자재명 X",
+    "modelName": "모델명 X",
+    "manufacturer": "제조사 X",
+    "usage": "회사 X",
+    "date": "2024-12-25",
+    "specification": "EA",
+    "quantity": 66
+  },
+  {
+    "rack": "WH01-4",
+    "itemName": "자재명 Y",
+    "modelName": "모델명 Y",
+    "manufacturer": "제조사 Y",
+    "usage": "회사 Y",
+    "date": "2024-01-05",
+    "specification": "BOX",
+    "quantity": 34
+  },
+  {
+    "rack": "WH01-5",
+    "itemName": "자재명 Z",
+    "modelName": "모델명 Z",
+    "manufacturer": "제조사 Z",
+    "usage": "회사 Z",
+    "date": "2024-02-10",
+    "specification": "EA",
+    "quantity": 58
+  },
+  {
+    "rack": "WH01-6",
+    "itemName": "자재명 AA",
+    "modelName": "모델명 AA",
+    "manufacturer": "제조사 AA",
+    "usage": "회사 AA",
+    "date": "2024-03-15",
+    "specification": "BOX",
+    "quantity": 90
+  },
+  {
+    "rack": "WH01-7",
+    "itemName": "자재명 BB",
+    "modelName": "모델명 BB",
+    "manufacturer": "제조사 BB",
+    "usage": "회사 BB",
+    "date": "2024-04-20",
+    "specification": "EA",
+    "quantity": 24
+  },
+  {
+    "rack": "WH01-8",
+    "itemName": "자재명 CC",
+    "modelName": "모델명 CC",
+    "manufacturer": "제조사 CC",
+    "usage": "회사 CC",
+    "date": "2024-05-25",
+    "specification": "BOX",
+    "quantity": 41
+  },
+  {
+    "rack": "WH01-9",
+    "itemName": "자재명 DD",
+    "modelName": "모델명 DD",
+    "manufacturer": "제조사 DD",
+    "usage": "회사 DD",
+    "date": "2024-06-30",
+    "specification": "EA",
+    "quantity": 87
+  },
+  {
+    "rack": "WH01-0",
+    "itemName": "자재명 EE",
+    "modelName": "모델명 EE",
+    "manufacturer": "제조사 EE",
+    "usage": "회사 EE",
+    "date": "2024-07-05",
+    "specification": "BOX",
+    "quantity": 19
+  },
+  {
+    "rack": "WH01-1",
+    "itemName": "자재명 FF",
+    "modelName": "모델명 FF",
+    "manufacturer": "제조사 FF",
+    "usage": "회사 FF",
+    "date": "2024-08-10",
+    "specification": "EA",
+    "quantity": 49
+  },
+  {
+    "rack": "WH01-2",
+    "itemName": "자재명 GG",
+    "modelName": "모델명 GG",
+    "manufacturer": "제조사 GG",
+    "usage": "회사 GG",
+    "date": "2024-09-15",
+    "specification": "BOX",
+    "quantity": 53
+  },
+  {
+    "rack": "WH01-3",
+    "itemName": "자재명 HH",
+    "modelName": "모델명 HH",
+    "manufacturer": "제조사 HH",
+    "usage": "회사 HH",
+    "date": "2024-10-20",
+    "specification": "EA",
+    "quantity": 62
+  },
+  {
+    "rack": "WH01-4",
+    "itemName": "자재명 II",
+    "modelName": "모델명 II",
+    "manufacturer": "제조사 II",
+    "usage": "회사 II",
+    "date": "2024-11-25",
+    "specification": "BOX",
+    "quantity": 71
+  },
+  {
+    "rack": "WH01-5",
+    "itemName": "자재명 JJ",
+    "modelName": "모델명 JJ",
+    "manufacturer": "제조사 JJ",
+    "usage": "회사 JJ",
+    "date": "2024-12-30",
+    "specification": "EA",
+    "quantity": 35
+  }
+]
