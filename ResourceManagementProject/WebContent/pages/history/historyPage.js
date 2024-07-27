@@ -1,5 +1,5 @@
 let jsonAll = [];
-//페이지 로드되면 바로 데이터 불러오게 하기.
+// 페이지 로드되면 바로 데이터 불러오게 하기.
 window.onload = fetchData;
 
 // 입출고내역 데이터 가져오기
@@ -12,7 +12,7 @@ async function fetchData() {
     const data = await response.json();
     jsonAll = [...data];
     console.log(jsonAll);
-    createTable(data);
+    createTable(jsonAll);
   } catch (error) {
     console.error("Fetch error: ", error);
   }
@@ -49,41 +49,8 @@ function createTable(data) {
   });
 }
 
-// 페이지 로드 시 데이터 가져오기
-document.addEventListener("DOMContentLoaded", fetchData);
-
 // 날짜 버튼 선택 시 dateStart 값 변경
-
-/* 집가서 더 만들기*/
-
-// historyPage.js
-
 document.addEventListener("DOMContentLoaded", function () {
-  const data = [
-    // 예제 데이터
-    {
-      rack: "WH01-0",
-      itemName: "Item 1",
-      modelName: "Model 1",
-      manufacturer: "Manufacturer 1",
-      usage: "Company A",
-      date: "2024-07-01",
-      specification: "BOX",
-      quantity: 12,
-    },
-    {
-      rack: "WH01-1",
-      itemName: "Item 2",
-      modelName: "Model 2",
-      manufacturer: "Manufacturer 2",
-      usage: "Company B",
-      date: "2024-07-05",
-      specification: "EA",
-      quantity: 34,
-    },
-    // ... 나머지 데이터
-  ];
-
   // 날짜 버튼 선택 시 dateStart 값 변경
   const today = new Date();
   const btnToday = document.getElementById("btnradio1");
@@ -129,8 +96,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const dateStartValue = new Date(document.getElementById("dateStart").value);
     const dateEndValue = new Date(document.getElementById("dateEnd").value);
 
-    const filteredData = data.filter((item) => {
-      const itemDate = new Date(item.date);
+    const filteredData = jsonAll.filter((item) => {
+      const itemDate = new Date(item.processingDate);
       const searchMatch = item[searchType].toLowerCase().includes(searchBar);
 
       return (
@@ -141,31 +108,9 @@ document.addEventListener("DOMContentLoaded", function () {
       );
     });
 
-    populateTable(filteredData);
+    createTable(filteredData);
   });
 
-  function populateTable(data) {
-    const tableBody = document.getElementById("tableBody");
-    tableBody.innerHTML = "";
-
-    data.forEach((item, index) => {
-      const row = document.createElement("tr");
-      row.innerHTML = `
-              <td>${index + 1}</td>
-              <td><input type="checkbox" /></td>
-              <td>${item.rack}</td>
-              <td>${item.itemName}</td>
-              <td>${item.modelName}</td>
-              <td>${item.manufacturer}</td>
-              <td>${item.usage}</td>
-              <td>${item.date}</td>
-              <td>${item.specification}</td>
-              <td><button type="button" onclick="alert('클릭!')"><img class="deleteImg" src="./static/deleteImg.jpg" /></button></td>
-          `;
-      tableBody.appendChild(row);
-    });
-  }
-
   // 초기 데이터 테이블 채우기
-  populateTable(data);
+  createTable(jsonAll);
 });
