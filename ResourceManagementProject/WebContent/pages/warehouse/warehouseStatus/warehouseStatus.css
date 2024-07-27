@@ -1,0 +1,57 @@
+.searchBox {
+  display: flex;
+  align-items: center;
+}
+
+.btn-group {
+  background-color: white;
+  font-weight: bold;
+}
+
+.badge-container {
+  margin-top: 10px;
+}
+
+.badge {
+  margin-right: 5px;
+}
+
+.badge .remove-btn {
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+.badge-primary {
+  background-color: #0d6efd;
+}
+
+.form-group {
+  margin-right: 15px;
+  flex: 1;
+}
+
+#badgeContainer {
+  flex-basis: 100%;
+  margin-top: 10px;
+}
+
+.btn {
+  flex-shrink: 0;
+}
+
+.regionLabel {
+  margin-bottom: 10px;
+}
+
+#searchRegionBtn {
+  margin-top: 20px;
+  width: 80px;
+  height: 40px;
+}
+
+.regionSearch {
+  background-color: white;
+  border: 1px solid #dee2e6;
+  padding: 10px;
+  border-radius: 5px;
+}

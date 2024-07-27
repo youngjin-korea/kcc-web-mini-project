@@ -27,16 +27,28 @@
       crossorigin="anonymous"
     />
   </head>
+
   <body>
     <div id="header-container"></div>
     <div id="navbar-container"></div>
     <div class="content p-3">
-      <h2 class="mb-3 ps-2" style="font-weight: bold">자재 관리</h2>
-      <div class="container">
+      <h2 class="mb-3 ps-2" style="font-weight: bold; font-size: 1.3rem">
+        자재 관리
+      </h2>
+      <div class="container m-2">
         <div id="searchBox" class="form-row mb-3">
           <div class="row">
-            <div class="col-2">모델명</div>
-            <div class="col-4">
+            <div class="col-1 p-0">자재명</div>
+            <div class="col-3 pe-2">
+              <input
+                type="text"
+                class="form-control"
+                id="searchMaterialName"
+                placeholder="자재명"
+              />
+            </div>
+            <div class="col-1 p-0">모델명</div>
+            <div class="col-3">
               <input
                 type="text"
                 class="form-control"
@@ -44,14 +56,22 @@
                 placeholder="모델명"
               />
             </div>
-            <div class="col-2">자재명</div>
-            <div class="col-4 pe-2">
-              <input
-                type="text"
-                class="form-control"
-                id="searchMaterialName"
-                placeholder="자재명"
-              />
+            <div class="col-3">
+              <select
+                class="form-select"
+                id="categorySelect"
+                aria-label="카테고리"
+              >
+                <option selected disabled>카테고리 선택</option>
+                <option value="청과">청과</option>
+                <option value="정육">정육</option>
+                <option value="음료">음료</option>
+                <option value="의류">의류</option>
+                <option value="가구">가구</option>
+                <option value="사무용품">사무용품</option>
+                <option value="전자기기">전자기기</option>
+                <option value="기타">기타</option>
+              </select>
             </div>
           </div>
           <div id="btnGroup" class="col-3">
@@ -70,7 +90,7 @@
         </div>
         <div class="row">
           <div class="material-table-container col-8">
-            <table class="table table-bordered table-hover">
+            <table>
               <thead>
                 <tr>
                   <th>자재명</th>
@@ -80,6 +100,7 @@
                   <th>규격</th>
                   <th>규격 당 무게</th>
                   <th>사용처</th>
+                  <th>보관 방법</th>
                 </tr>
               </thead>
               <tbody id="materialTableBody">
@@ -87,7 +108,7 @@
               </tbody>
             </table>
           </div>
-          <div id="settingArea" class="form-row mt-3 col-4">
+          <div id="settingArea" class="form-row col-3">
             <h1 style="font-weight: bold; font-size: 20px; padding: 10px">
               자재 세부 정보
             </h1>
@@ -95,7 +116,7 @@
               <input
                 type="text"
                 class="form-control"
-                id="materialCode"
+                id="materialNameInput"
                 placeholder="자재명"
               />
             </div>
@@ -103,7 +124,7 @@
               <input
                 type="text"
                 class="form-control"
-                id="materialName"
+                id="modelNameInput"
                 placeholder="모델명"
               />
             </div>
@@ -111,28 +132,32 @@
               <input
                 type="text"
                 class="form-control"
-                id="materialLocation"
+                id="manufacturerInput"
                 placeholder="제조사"
               />
             </div>
             <div class="col">
-              <select class="form-select" aria-label="카테고리">
+              <select
+                class="form-select"
+                id="categorySelect"
+                aria-label="카테고리"
+              >
                 <option selected disabled>카테고리 선택</option>
-                <option value="1">청과</option>
-                <option value="2">정육</option>
-                <option value="3">음료</option>
-                <option value="4">의류</option>
-                <option value="5">가구</option>
-                <option value="6">사무용품</option>
-                <option value="7">전자기기</option>
-                <option value="8">기타</option>
+                <option value="청과">청과</option>
+                <option value="정육">정육</option>
+                <option value="음료">음료</option>
+                <option value="의류">의류</option>
+                <option value="가구">가구</option>
+                <option value="사무용품">사무용품</option>
+                <option value="전자기기">전자기기</option>
+                <option value="기타">기타</option>
               </select>
             </div>
             <div class="col">
-              <select class="form-select" aria-label="규격">
+              <select class="form-select" id="unitSelect" aria-label="규격">
                 <option selected disabled>규격 선택</option>
-                <option value="1">EA</option>
-                <option value="2">BOX</option>
+                <option value="EA">EA</option>
+                <option value="BOX">BOX</option>
               </select>
             </div>
 
@@ -167,10 +192,14 @@
               <!-- 초기 값 설정 -->
             </div>
             <div class="col">
-              <select class="form-select" aria-label="보관 방법">
+              <select
+                class="form-select"
+                id="storageMethodSelect"
+                aria-label="보관 방법"
+              >
                 <option selected disabled>보관 방법 선택</option>
-                <option value="1">상온</option>
-                <option value="2">냉장</option>
+                <option value="상온">상온</option>
+                <option value="냉장">냉장</option>
               </select>
             </div>
             <div class="col">
