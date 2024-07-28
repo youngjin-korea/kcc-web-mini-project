@@ -57,21 +57,23 @@ h3 {
 #content {
   display: flex;
   gap: 0.5rem;
+  height: 709px;
 }
 
 /* id list */
 #list {
   overflow-x: auto;
-  margin-bottom: 1.5rem;
+  /* margin-bottom: 1.5rem; */
   border: 1px solid #dee2e6;
   border-radius: 3px;
   padding: 0.5rem;
   background-color: white;
 }
 #list-s {
-  overflow-y: auto;
   max-height: 40rem;
   width: 30rem;
+  height: 622px;
+  overflow-y: scroll;
 }
 
 /* controll */
@@ -113,14 +115,30 @@ th {
   color: white;
 }
 tr:nth-child(even) {
-  background-color: #f4eeee;
+  background-color: #f7f7f7;
 }
 tr:hover {
   background-color: #d3d3d3;
   cursor: pointer;
 }
 
+thead {
+  position: sticky;
+  top: 0;
+}
+
+#tc {
+  height: 645px;
+  overflow-y: scroll;
+  position: relative;
+}
+
 h3 {
   font-weight: bold;
   margin-bottom: 0.5rem;
+}
+
+/* click 됐을때 tr color */
+#clickedColor {
+  background-color: #d3d3d3;
 }
