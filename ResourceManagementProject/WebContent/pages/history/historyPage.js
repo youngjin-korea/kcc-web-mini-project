@@ -139,21 +139,21 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // 삭제 버튼 클릭 시 선택된 항목 삭제
 document.querySelector(".btn-outline-danger").addEventListener("click", () => {
-  // 1. 모든 체크박스 요소를 선택하여 NodeList로 반환합니다.
+  // 모든 체크박스 요소를 선택하여 NodeList로 반환
   const checkboxes = document.querySelectorAll(".delete-checkbox");
 
-  // 2. 각 체크박스를 반복하여 처리합니다.
   checkboxes.forEach((checkbox) => {
-    // 3. 체크박스가 선택된 경우에만 처리합니다.
     if (checkbox.checked) {
-      // 4. 체크박스의 data-index 속성을 가져와 정수로 변환합니다. 이 값은 배열에서 항목의 인덱스를 나타냅니다.
+      //체크박스의 data-index 속성을 가져와 정수로 변환
+      //이 값은 배열에서 항목의 인덱스를 나타냅니다.
       const index = parseInt(checkbox.dataset.index, 10);
 
-      // 5. 인덱스에 해당하는 항목을 jsonAll 배열에서 삭제합니다. splice 메서드는 배열에서 특정 항목을 제거합니다.
+      //인덱스에 해당하는 항목을 jsonAll 배열에서 삭제
+      // splice 메서드는 배열에서 특정 항목제거
       jsonAll.splice(index, 1);
     }
   });
 
-  // 6. jsonAll 배열의 현재 상태를 기준으로 테이블을 다시 만듭니다.
+  // jsonAll 배열의 현재 상태를 기준으로 테이블을 다시 생성
   createTable(jsonAll);
 });
