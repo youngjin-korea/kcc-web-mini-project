@@ -50,100 +50,105 @@ function createTable(data) {
   });
 }
 
-// 날짜 버튼 선택 시 dateStart 값 변경
-document.addEventListener("DOMContentLoaded", function () {
-  const today = new Date();
-  const btnToday = document.getElementById("btnradio1");
-  const btnWeek = document.getElementById("btnradio2");
-  const btnMonth = document.getElementById("btnradio3");
-  const btnSixMonths = document.getElementById("btnradio4");
-  const dateStart = document.getElementById("dateStart");
-  const dateEnd = document.getElementById("dateEnd");
+// 날짜 버튼 선택 시 dateStart, dateEnd 값 변경
+const today = new Date();
+const btnToday = document.getElementById("btnradio1");
+const btnWeek = document.getElementById("btnradio2");
+const btnMonth = document.getElementById("btnradio3");
+const btnSixMonths = document.getElementById("btnradio4");
+const dateStart = document.getElementById("dateStart");
+const dateEnd = document.getElementById("dateEnd");
 
-  btnToday.addEventListener("click", () => {
-    dateStart.valueAsDate = new Date(today);
-    dateEnd.valueAsDate = new Date(today);
-  });
-
-  btnWeek.addEventListener("click", () => {
-    const weekAgo = new Date(today);
-    weekAgo.setDate(today.getDate() - 7);
-    dateStart.valueAsDate = weekAgo;
-    dateEnd.valueAsDate = new Date(today);
-  });
-
-  btnMonth.addEventListener("click", () => {
-    const monthAgo = new Date(today);
-    monthAgo.setMonth(today.getMonth() - 1);
-    dateStart.valueAsDate = monthAgo;
-    dateEnd.valueAsDate = new Date(today);
-  });
-
-  btnSixMonths.addEventListener("click", () => {
-    const sixMonthsAgo = new Date(today);
-    sixMonthsAgo.setMonth(today.getMonth() - 6);
-    dateStart.valueAsDate = sixMonthsAgo;
-    dateEnd.valueAsDate = new Date(today);
-  });
-
-  // 검색 버튼 클릭 시 데이터 필터링
-  document.querySelector(".search").addEventListener("click", () => {
-    const selectInput = document.getElementById("selectInput").value;
-    const searchType = document.querySelector(
-      'input[name="searchType"]:checked'
-    ).value;
-    const searchBar = document.getElementById("searchBar").value.toLowerCase();
-    const dateStartValue = new Date(document.getElementById("dateStart").value);
-    const dateEndValue = new Date(document.getElementById("dateEnd").value);
-
-    const filteredData = jsonAll.filter((item) => {
-      const itemDate = new Date(item.processingDate);
-      const searchMatch = item[searchType].toLowerCase().includes(searchBar);
-
-      return (
-        (selectInput === "전체" || item.category === selectInput) &&
-        itemDate >= dateStartValue &&
-        itemDate <= dateEndValue &&
-        searchMatch
-      );
-    });
-
-    createTable(filteredData);
-  });
-
-  // 초기화 버튼 클릭 시 필터 초기화
-  document
-    .querySelector(".button.btn-secondary")
-    .addEventListener("click", () => {
-      // 구분을 전체로 설정
-      document.getElementById("selectInput").value = "전체";
-
-      // 선택박스를 자재명으로 설정
-      document.getElementById("item").checked = true;
-
-      // 기간을 오늘로 설정
-      const today = new Date();
-      document.getElementById("dateStart").valueAsDate = today;
-      document.getElementById("dateEnd").valueAsDate = today;
-
-      // 검색창 초기화
-      document.getElementById("searchBar").value = "";
-
-      // 기간선택 버튼 초기화
-      document.getElementById("btnradio1").checked = true;
-
-      // 전체 내역으로 다시 출력
-      createTable(jsonAll);
-
-      // 안내하기
-      swal(
-        "입출고내역 초기화",
-        "입출고 내역 및 검색 조건을 초기화하였습니다.",
-        "success"
-      );
-    });
+btnToday.addEventListener("click", () => {
+  dateStart.valueAsDate = new Date(today);
+  dateEnd.valueAsDate = new Date(today);
 });
 
+btnWeek.addEventListener("click", () => {
+  const weekAgo = new Date(today);
+  weekAgo.setDate(today.getDate() - 7);
+  dateStart.valueAsDate = weekAgo;
+  dateEnd.valueAsDate = new Date(today);
+});
+
+btnMonth.addEventListener("click", () => {
+  const monthAgo = new Date(today);
+  monthAgo.setMonth(today.getMonth() - 1);
+  dateStart.valueAsDate = monthAgo;
+  dateEnd.valueAsDate = new Date(today);
+});
+
+btnSixMonths.addEventListener("click", () => {
+  const sixMonthsAgo = new Date(today);
+  sixMonthsAgo.setMonth(today.getMonth() - 6);
+  dateStart.valueAsDate = sixMonthsAgo;
+  dateEnd.valueAsDate = new Date(today);
+});
+
+/*---------------------------검색 구현 완료------------------*/
+document.querySelector(".search").addEventListener("click", () => {
+  const selectInput = document.getElementById("selectInput").value;
+  const searchType = document.querySelector(
+    'input[name="searchType"]:checked'
+  ).value;
+  const searchBar = document.getElementById("searchBar").value.toLowerCase();
+  const dateStartValue = new Date(document.getElementById("dateStart").value);
+  const dateEndValue = new Date(document.getElementById("dateEnd").value);
+
+  const filteredData = jsonAll.filter((item) => {
+    const itemDate = new Date(item.processingDate);
+    console.log("서치타입" + searchType);
+    const searchValue = item[searchType] ? item[searchType].toLowerCase() : "";
+    const searchMatch = searchValue.includes(searchBar);
+
+    if(itemDate >= dateStartValue &&
+      itemDate <= dateEndValue ) console.log('날짜가 필터링됨');
+    return (
+      (selectInput === "전체" || item.category === selectInput) &&
+      itemDate >= dateStartValue &&
+      itemDate <= dateEndValue &&
+      searchMatch
+    );
+  });
+
+  console.log(filteredData);
+  createTable(filteredData);
+});
+
+/*------------------------초기화 구현 완료------------------------*/
+// 초기화 버튼 클릭 시 필터 초기화
+document
+  .querySelector(".button.btn-secondary")
+  .addEventListener("click", () => {
+    // 구분을 전체로 설정
+    document.getElementById("selectInput").value = "전체";
+
+    // 선택박스를 자재명으로 설정
+    document.getElementById("item").checked = true;
+
+    // 기간을 오늘로 설정
+    const today = new Date();
+    document.getElementById("dateStart").valueAsDate = today;
+    document.getElementById("dateEnd").valueAsDate = today;
+
+    // 검색창 초기화
+    document.getElementById("searchBar").value = "";
+
+    // 기간선택 버튼 초기화
+    document.getElementById("btnradio1").checked = true;
+
+    // 전체 내역으로 다시 출력
+    createTable(jsonAll);
+
+    // 안내하기
+    swal(
+      "입출고내역 초기화",
+      "입출고 내역 및 검색 조건을 초기화하였습니다.",
+      "success"
+    );
+  });
+
+/* -------------------삭제 구현 완료---------------------------*/
 // 삭제 버튼 클릭 시 선택된 항목 삭제
 document.querySelector(".btn-outline-danger").addEventListener("click", () => {
   // 모든 체크박스 요소를 선택하여 NodeList로 반환
@@ -221,3 +226,71 @@ document.getElementById("tableBody").addEventListener("click", (event) => {
     });
   }
 });
+
+/*--------------ajax로 카테고리 클릭시 데이터 정렬-----------*/
+// 테이블 헤더 클릭 시 정렬 기능 추가
+$(document).ready(function () {
+  $("th[data-category]").click(function () {
+    const header = $(this);
+    const category = header.data("category");
+    const currentOrder = header.hasClass("asc")
+      ? "asc"
+      : header.hasClass("desc")
+      ? "desc"
+      : null;
+    const newOrder = currentOrder === "asc" ? "desc" : "asc";
+
+    jsonAll.sort((a, b) => {
+      if (a[category] < b[category]) return newOrder === "asc" ? -1 : 1;
+      if (a[category] > b[category]) return newOrder === "asc" ? 1 : -1;
+      return 0;
+    });
+
+    $("th[data-category]").removeClass("asc desc");
+    header.addClass(newOrder);
+
+    createTable(jsonAll);
+  });
+});
+
+/*----------엑셀 뽑기 ---------------------*/
+var excelHandler = {
+  getExcelFileName: function () {
+    return "table-test.xlsx";
+  },
+  getSheetName: function () {
+    return "Table Test Sheet";
+  },
+  getExcelData: function () {
+    return document.getElementById("tableData");
+  },
+  getWorksheet: function () {
+    return XLSX.utils.table_to_sheet(this.getExcelData());
+  },
+};
+
+function s2ab(s) {
+  var buf = new ArrayBuffer(s.length); //convert s to arrayBuffer
+  var view = new Uint8Array(buf); //create uint8array as viewer
+  for (var i = 0; i < s.length; i++) view[i] = s.charCodeAt(i) & 0xff; //convert to octet
+  return buf;
+}
+function exportExcel() {
+  // step 1. workbook 생성
+  var wb = XLSX.utils.book_new();
+
+  // step 2. 시트 만들기
+  var newWorksheet = excelHandler.getWorksheet();
+
+  // step 3. workbook에 새로만든 워크시트에 이름을 주고 붙인다.
+  XLSX.utils.book_append_sheet(wb, newWorksheet, excelHandler.getSheetName());
+
+  // step 4. 엑셀 파일 만들기
+  var wbout = XLSX.write(wb, { bookType: "xlsx", type: "binary" });
+
+  // step 5. 엑셀 파일 내보내기
+  saveAs(
+    new Blob([s2ab(wbout)], { type: "application/octet-stream" }),
+    excelHandler.getExcelFileName()
+  );
+}

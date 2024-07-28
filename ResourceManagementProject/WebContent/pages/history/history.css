@@ -174,7 +174,15 @@ th {
   background-color: #e0e0e0;
   font-weight: bold;
 }
-
+th {
+  cursor: pointer;
+}
+.asc::after {
+  content: " △";
+}
+.desc::after {
+  content: " ▽";
+}
 tr:nth-child(even) {
   background-color: #f7f7f7;
 }
