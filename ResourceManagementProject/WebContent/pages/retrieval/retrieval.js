@@ -1,5 +1,6 @@
 let jsonAll = [];
 let jsonList = [];
+let currentClickedRow = null;
 window.onload = fetchData;
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -27,6 +28,7 @@ async function fetchData() {
       throw new Error("Network response was not ok " + response.statusText);
     }
     const data = await response.json();
+    jsonAll = [...data];
 
     populateTable(data);
   } catch (error) {
@@ -34,12 +36,21 @@ async function fetchData() {
   }
 }
 
+// data 객체의 tr 생성 함수
 function populateTable(data) {
   const tableBody = document
     .getElementById("dataTable")
     .getElementsByTagName("tbody")[0];
-  data.forEach((item) => {
+  tableBody.innerHTML = "";
+  data.forEach((item, index) => {
     const row = document.createElement("tr");
+
+    // 행에 고유 ID를 설정 (예: "row-1", "row-2", ...)
+    row.id = `row-${index + 1}`;
+
+    row.addEventListener("click", (e) => {
+      clickedList(item, e);
+    });
 
     Object.values(item).forEach((text) => {
       const cell = document.createElement("td");
@@ -51,38 +62,43 @@ function populateTable(data) {
   });
 }
 
-// 밑은 모달창
-document.addEventListener("DOMContentLoaded", function () {
-  fetch("newMaterialModal.html")
-    .then((response) => response.text())
-    .then((data) => {
-      document.body.insertAdjacentHTML("beforeend", data);
+//검색기능
+window.enterkeySearch = (event) => {
+  if (event.keyCode == 13 || event.type === "click") {
+    searchItem();
+  }
+};
 
-      // 모달창이 로드된 후에 이벤트 리스너를 추가합니다.
-      const newCustomRangeweight = document.getElementById(
-        "newCustomRangeweight"
-      );
-      const newCustomNumber = document.getElementById("newCustomNumber");
+function searchItem() {
+  const modelName = document.getElementById("model-name").value.toLowerCase();
+  const itemName = document.getElementById("material-name").value.toLowerCase();
 
-      newCustomRangeweight.addEventListener("input", function () {
-        newUpdateValueFromRange(newCustomRangeweight.value);
-      });
+  const filteredData = jsonAll.filter(
+    (material) =>
+      material.modelName.toLowerCase().includes(modelName) &&
+      material.itemName.toLowerCase().includes(itemName)
+  );
 
-      newCustomNumber.addEventListener("input", function () {
-        newUpdateValueFromNumber(newCustomNumber.value);
-      });
-    })
-    .catch((error) => console.error("Error loading the modal:", error));
-});
-
-function newUpdateValueFromRange(value) {
-  document.getElementById("newRangeValue").innerText = value;
-  document.getElementById("newCustomNumber").value = value;
+  populateTable(filteredData);
 }
 
-function newUpdateValueFromNumber(value) {
-  if (value < 0) value = 0;
-  if (value > 100) value = 100;
-  document.getElementById("newRangeValue").innerText = value;
-  document.getElementById("newCustomRangeweight").value = value;
+// 자재 click 시 바코드 및 생성 날짜 생성
+function clickedList(item, e) {
+  // 현재 클릭된 행
+  const clickedRow = e.currentTarget;
+
+  // 이전 클릭된 행에서 ID 제거
+  if (currentClickedRow && currentClickedRow !== clickedRow) {
+    currentClickedRow.removeAttribute("id");
+  }
+
+  // 클릭된 행에 ID 설정
+  clickedRow.id = "clickedColor";
+
+  // 현재 클릭된 행을 업데이트
+  currentClickedRow = clickedRow;
+
+  // 클릭된 행의 item 정보와 ID 출력
+  console.log("아이템 값: ", item);
+  console.log("클릭된 행의 ID: ", clickedRow.id);
 }

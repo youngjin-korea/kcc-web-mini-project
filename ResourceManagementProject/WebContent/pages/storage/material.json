@@ -2,91 +2,235 @@
   {
     "warehouseNumber": "001",
     "itemName": "자재A",
-    "modelName": "모델X",
+    "modelName": "모델A",
     "manufacturer": "제조사Y",
-    "specification": "규격A",
+    "specification": "EA",
     "usage": "사용처1",
-    "currentStock": 100
+    "currentStock": 0
   },
   {
     "warehouseNumber": "002",
-    "itemName": "자재A",
-    "modelName": "모델X",
+    "itemName": "자재B",
+    "modelName": "모델B",
     "manufacturer": "제조사Z",
-    "specification": "규격B",
+    "specification": "BOX",
     "usage": "사용처2",
-    "currentStock": 50
+    "currentStock": 0
   },
   {
     "warehouseNumber": "003",
     "itemName": "자재C",
-    "modelName": "모델Z",
+    "modelName": "모델C",
     "manufacturer": "제조사X",
-    "specification": "규격C",
+    "specification": "EA",
     "usage": "사용처3",
-    "currentStock": 200
+    "currentStock": 0
   },
   {
     "warehouseNumber": "004",
     "itemName": "자재D",
-    "modelName": "모델X",
+    "modelName": "모델D",
     "manufacturer": "제조사Y",
-    "specification": "규격D",
+    "specification": "BOX",
     "usage": "사용처4",
-    "currentStock": 75
+    "currentStock": 0
   },
   {
     "warehouseNumber": "005",
     "itemName": "자재E",
-    "modelName": "모델Y",
+    "modelName": "모델E",
     "manufacturer": "제조사Z",
-    "specification": "규격E",
+    "specification": "EA",
     "usage": "사용처5",
-    "currentStock": 30
+    "currentStock": 0
   },
   {
     "warehouseNumber": "006",
     "itemName": "자재F",
-    "modelName": "모델Z",
+    "modelName": "모델F",
     "manufacturer": "제조사X",
-    "specification": "규격F",
+    "specification": "BOX",
     "usage": "사용처6",
-    "currentStock": 150
+    "currentStock": 0
   },
   {
     "warehouseNumber": "007",
     "itemName": "자재G",
-    "modelName": "모델X",
+    "modelName": "모델G",
     "manufacturer": "제조사Y",
-    "specification": "규격G",
+    "specification": "EA",
     "usage": "사용처7",
-    "currentStock": 80
+    "currentStock": 0
   },
   {
     "warehouseNumber": "008",
     "itemName": "자재H",
-    "modelName": "모델Y",
+    "modelName": "모델H",
     "manufacturer": "제조사Z",
-    "specification": "규격H",
+    "specification": "BOX",
     "usage": "사용처8",
-    "currentStock": 120
+    "currentStock": 0
   },
   {
     "warehouseNumber": "009",
     "itemName": "자재I",
-    "modelName": "모델Z",
+    "modelName": "모델I",
     "manufacturer": "제조사X",
-    "specification": "규격I",
+    "specification": "EA",
     "usage": "사용처9",
-    "currentStock": 95
+    "currentStock": 0
   },
   {
     "warehouseNumber": "010",
     "itemName": "자재J",
-    "modelName": "모델X",
+    "modelName": "모델J",
     "manufacturer": "제조사Y",
-    "specification": "규격J",
+    "specification": "BOX",
     "usage": "사용처10",
-    "currentStock": 65
+    "currentStock": 0
+  },
+  {
+    "warehouseNumber": "011",
+    "itemName": "자재K",
+    "modelName": "모델K",
+    "manufacturer": "제조사Z",
+    "specification": "EA",
+    "usage": "사용처11",
+    "currentStock": 0
+  },
+  {
+    "warehouseNumber": "012",
+    "itemName": "자재L",
+    "modelName": "모델L",
+    "manufacturer": "제조사X",
+    "specification": "BOX",
+    "usage": "사용처12",
+    "currentStock": 0
+  },
+  {
+    "warehouseNumber": "013",
+    "itemName": "자재M",
+    "modelName": "모델M",
+    "manufacturer": "제조사Y",
+    "specification": "EA",
+    "usage": "사용처13",
+    "currentStock": 0
+  },
+  {
+    "warehouseNumber": "014",
+    "itemName": "자재N",
+    "modelName": "모델N",
+    "manufacturer": "제조사Z",
+    "specification": "BOX",
+    "usage": "사용처14",
+    "currentStock": 0
+  },
+  {
+    "warehouseNumber": "015",
+    "itemName": "자재O",
+    "modelName": "모델O",
+    "manufacturer": "제조사X",
+    "specification": "EA",
+    "usage": "사용처15",
+    "currentStock": 0
+  },
+  {
+    "warehouseNumber": "016",
+    "itemName": "자재P",
+    "modelName": "모델P",
+    "manufacturer": "제조사Y",
+    "specification": "BOX",
+    "usage": "사용처16",
+    "currentStock": 0
+  },
+  {
+    "warehouseNumber": "017",
+    "itemName": "자재Q",
+    "modelName": "모델Q",
+    "manufacturer": "제조사Z",
+    "specification": "EA",
+    "usage": "사용처17",
+    "currentStock": 0
+  },
+  {
+    "warehouseNumber": "018",
+    "itemName": "자재R",
+    "modelName": "모델R",
+    "manufacturer": "제조사X",
+    "specification": "BOX",
+    "usage": "사용처18",
+    "currentStock": 0
+  },
+  {
+    "warehouseNumber": "019",
+    "itemName": "자재S",
+    "modelName": "모델S",
+    "manufacturer": "제조사Y",
+    "specification": "EA",
+    "usage": "사용처19",
+    "currentStock": 0
+  },
+  {
+    "warehouseNumber": "020",
+    "itemName": "자재T",
+    "modelName": "모델T",
+    "manufacturer": "제조사Z",
+    "specification": "BOX",
+    "usage": "사용처20",
+    "currentStock": 0
+  },
+  {
+    "warehouseNumber": "021",
+    "itemName": "자재U",
+    "modelName": "모델U",
+    "manufacturer": "제조사X",
+    "specification": "EA",
+    "usage": "사용처21",
+    "currentStock": 0
+  },
+  {
+    "warehouseNumber": "022",
+    "itemName": "자재V",
+    "modelName": "모델V",
+    "manufacturer": "제조사Y",
+    "specification": "BOX",
+    "usage": "사용처22",
+    "currentStock": 0
+  },
+  {
+    "warehouseNumber": "023",
+    "itemName": "자재W",
+    "modelName": "모델W",
+    "manufacturer": "제조사Z",
+    "specification": "EA",
+    "usage": "사용처23",
+    "currentStock": 0
+  },
+  {
+    "warehouseNumber": "024",
+    "itemName": "자재X",
+    "modelName": "모델X",
+    "manufacturer": "제조사X",
+    "specification": "BOX",
+    "usage": "사용처24",
+    "currentStock": 0
+  },
+  {
+    "warehouseNumber": "025",
+    "itemName": "자재Y",
+    "modelName": "모델Y",
+    "manufacturer": "제조사Y",
+    "specification": "EA",
+    "usage": "사용처25",
+    "currentStock": 0
+  },
+  {
+    "warehouseNumber": "026",
+    "itemName": "자재Z",
+    "modelName": "모델Z",
+    "manufacturer": "제조사Z",
+    "specification": "BOX",
+    "usage": "사용처26",
+    "currentStock": 0
   }
 ]
