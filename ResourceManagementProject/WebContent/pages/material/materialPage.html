@@ -26,20 +26,27 @@
       integrity="sha384-/frq1SRXYH/bSyou/HUp/hib7RVN1TawQYja658FEOodR/FQBKVqT9Ol+Oz3Olq5"
       crossorigin="anonymous"
     />
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
   </head>
 
   <body>
     <div id="header-container"></div>
     <div id="navbar-container"></div>
     <div class="content p-3">
-      <h2 class="mb-3 ps-2" style="font-weight: bold; font-size: 1.3rem">
-        자재 관리
-      </h2>
+      <div class="d-flex align-items-center">
+        <h2 class="mb-3 ps-2" style="font-weight: bold; font-size: 1.3rem">
+          자재 관리
+        </h2>
+        <button class="mb-3 ms-3 btn btn-primary" onclick="downloadExcel()">
+          자재 목록 다운로드
+        </button>
+      </div>
       <div class="container m-2">
         <div id="searchBox" class="form-row mb-3">
           <div class="row">
-            <div class="col-1 p-0">자재명</div>
-            <div class="col-3 pe-2">
+            <div class="col-1 p-0 ps-4">자재명</div>
+            <div class="col-2 pe-2">
               <input
                 type="text"
                 class="form-control"
@@ -47,13 +54,22 @@
                 placeholder="자재명"
               />
             </div>
-            <div class="col-1 p-0">모델명</div>
-            <div class="col-3">
+            <div class="col-1 p-0 ps-4">모델명</div>
+            <div class="col-2">
               <input
                 type="text"
                 class="form-control"
                 id="searchModelName"
                 placeholder="모델명"
+              />
+            </div>
+            <div class="col-1 p-0 ps-4">제조사</div>
+            <div class="col-2">
+              <input
+                type="text"
+                class="form-control"
+                id="searchManufacturer"
+                placeholder="제조사"
               />
             </div>
             <div class="col-3">
@@ -63,6 +79,7 @@
                 aria-label="카테고리"
               >
                 <option selected disabled>카테고리 선택</option>
+                <option value="전체">전체</option>
                 <option value="청과">청과</option>
                 <option value="정육">정육</option>
                 <option value="음료">음료</option>
@@ -99,8 +116,8 @@
                   <th>카테고리</th>
                   <th>규격</th>
                   <th>규격 당 무게</th>
-                  <th>사용처</th>
                   <th>보관 방법</th>
+                  <th>사용처</th>
                 </tr>
               </thead>
               <tbody id="materialTableBody">
@@ -139,7 +156,7 @@
             <div class="col">
               <select
                 class="form-select"
-                id="categorySelect"
+                id="categorySelectDetail"
                 aria-label="카테고리"
               >
                 <option selected disabled>카테고리 선택</option>
@@ -166,15 +183,16 @@
                 >규격 당 무게</label
               >
               <span id="rangeValue" style="font-weight: bold; color: #0d6efd"
-                >50</span
+                >0</span
               >
               <input
                 type="range"
                 class="form-range"
                 id="customRangeweight"
-                min="0"
+                min="0.0"
                 max="100"
-                step="5"
+                step="0.1"
+                value="0"
                 oninput="updateValueFromRange(this.value)"
               />
 
@@ -183,9 +201,10 @@
                 class="form-control"
                 type="number"
                 id="customNumber"
-                min="0"
+                min="0.0"
                 max="100"
-                value="50"
+                step="0.1"
+                value="0"
                 oninput="updateValueFromNumber(this.value)"
               />
 
@@ -228,5 +247,13 @@
       crossorigin="anonymous"
     ></script>
     <script type="text/javascript" src="material.js"></script>
+    <script
+      type="text/javascript"
+      src="../../components/loadNavbar.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="../../components/loadHeader.js"
+    ></script>
   </body>
 </html>
