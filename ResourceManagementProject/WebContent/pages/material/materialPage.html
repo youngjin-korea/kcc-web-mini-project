@@ -38,8 +38,8 @@
       <div class="container m-2">
         <div id="searchBox" class="form-row mb-3">
           <div class="row">
-            <div class="col-1 p-0">자재명</div>
-            <div class="col-3 pe-2">
+            <div class="col-1 p-0 ps-4">자재명</div>
+            <div class="col-2 pe-2">
               <input
                 type="text"
                 class="form-control"
@@ -47,13 +47,22 @@
                 placeholder="자재명"
               />
             </div>
-            <div class="col-1 p-0">모델명</div>
-            <div class="col-3">
+            <div class="col-1 p-0 ps-4">모델명</div>
+            <div class="col-2">
               <input
                 type="text"
                 class="form-control"
                 id="searchModelName"
                 placeholder="모델명"
+              />
+            </div>
+            <div class="col-1 p-0 ps-4">제조사</div>
+            <div class="col-2">
+              <input
+                type="text"
+                class="form-control"
+                id="searchManufacturer"
+                placeholder="제조사"
               />
             </div>
             <div class="col-3">
@@ -63,6 +72,7 @@
                 aria-label="카테고리"
               >
                 <option selected disabled>카테고리 선택</option>
+                <option value="전체">전체</option>
                 <option value="청과">청과</option>
                 <option value="정육">정육</option>
                 <option value="음료">음료</option>
@@ -139,7 +149,7 @@
             <div class="col">
               <select
                 class="form-select"
-                id="categorySelect"
+                id="categorySelectDetail"
                 aria-label="카테고리"
               >
                 <option selected disabled>카테고리 선택</option>
@@ -228,5 +238,13 @@
       crossorigin="anonymous"
     ></script>
     <script type="text/javascript" src="material.js"></script>
+    <script
+      type="text/javascript"
+      src="../../components/loadNavbar.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="../../components/loadHeader.js"
+    ></script>
   </body>
 </html>

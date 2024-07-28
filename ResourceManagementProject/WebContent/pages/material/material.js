@@ -78,15 +78,49 @@ function searchItem() {
   const materialName = document
     .getElementById("searchMaterialName")
     .value.toLowerCase();
+  const manufacturer = document
+    .getElementById("searchManufacturer")
+    .value.toLowerCase();
+  const category = document.getElementById("categorySelect").value;
 
   fetch("../../data/material.json")
     .then((response) => response.json())
     .then((materialData) => {
-      const filteredData = materialData.filter(
-        (material) =>
-          material.modelName.toLowerCase().includes(modelName) &&
-          material.materialName.toLowerCase().includes(materialName)
-      );
+      const filteredData = materialData.filter((material) => {
+        let match = true;
+
+        if (
+          materialName &&
+          !material.materialName.toLowerCase().includes(materialName)
+        ) {
+          match = false;
+        }
+
+        if (
+          modelName &&
+          !material.modelName.toLowerCase().includes(modelName)
+        ) {
+          match = false;
+        }
+
+        if (
+          manufacturer &&
+          !material.manufacturer.toLowerCase().includes(manufacturer)
+        ) {
+          match = false;
+        }
+
+        if (
+          category &&
+          category !== "카테고리 선택" &&
+          category !== "전체" &&
+          material.category !== category
+        ) {
+          match = false;
+        }
+
+        return match;
+      });
 
       const tableBody = document.getElementById("materialTableBody");
       tableBody.innerHTML = "";
