@@ -102,3 +102,54 @@ function clickedList(item, e) {
   console.log("아이템 값: ", item);
   console.log("클릭된 행의 ID: ", clickedRow.id);
 }
+
+function releaseItems() {
+  const quantityInput = document.getElementById("release-quantity");
+  const quantity = parseInt(quantityInput.value);
+  if (!currentClickedRow) {
+    alert("재고 목록에서 아이템을 선택해주세요.");
+    return;
+  }
+  if (isNaN(quantity) || quantity <= 0) {
+    alert("출고 수량을 올바르게 입력해주세요.");
+    return;
+  }
+
+  const selectedItemData = jsonAll.filter(
+    (item) =>
+      item.modelName === currentClickedRow.cells[2].textContent &&
+      item.itemName === currentClickedRow.cells[1].textContent
+  );
+
+  if (selectedItemData.length < quantity) {
+    alert("재고량보다 출고 수량이 많습니다.");
+    return;
+  }
+
+  const sortedItems = selectedItemData.sort(
+    (a, b) => new Date(a.entryDate) - new Date(b.entryDate)
+  );
+  const itemsToRelease = sortedItems.slice(0, quantity);
+  document
+    .getElementById("table-s")
+    .getElementsByTagName("tbody")[0].innerHTML = "";
+  itemsToRelease.forEach((item) => {
+    jsonAll = jsonAll.filter((i) => i.barcodeNumber !== item.barcodeNumber);
+    addReleasedItemToTable(item);
+  });
+
+  populateTable(jsonAll);
+}
+
+function addReleasedItemToTable(item) {
+  const tableBody = document
+    .getElementById("table-s")
+    .getElementsByTagName("tbody")[0];
+  const newRow = document.createElement("tr");
+  newRow.innerHTML = `
+    <td>${tableBody.rows.length + 1}</td>
+    <td>${item.entryDate}</td>
+    <td>${item.barcodeNumber}</td>
+  `;
+  tableBody.appendChild(newRow);
+}

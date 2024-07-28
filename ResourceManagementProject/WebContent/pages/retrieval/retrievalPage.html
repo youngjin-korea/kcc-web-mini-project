@@ -96,8 +96,11 @@
               <h3>출고관리 상세정보</h3>
               <div class="controlBtn">
                 <div class="start">
-                  출고수량: <input type="text" placeholder=" 0" />
-                  <button class="btn btn-primary">출고완료</button>
+                  출고수량:
+                  <input type="text" id="release-quantity" placeholder=" 0" />
+                  <button class="btn btn-primary" onclick="releaseItems()">
+                    출고완료
+                  </button>
                 </div>
               </div>
               <div id="list-s">
@@ -110,16 +113,7 @@
                     </tr>
                   </thead>
                   <tbody>
-                    <tr>
-                      <td>1</td>
-                      <td>2024-07-07</td>
-                      <td>2405660000</td>
-                    </tr>
-                    <tr>
-                      <td>1</td>
-                      <td>2024-07-07</td>
-                      <td>2405660000</td>
-                    </tr>
+                    <!-- 출고품이 들어옴 -->
                   </tbody>
                 </table>
               </div>
