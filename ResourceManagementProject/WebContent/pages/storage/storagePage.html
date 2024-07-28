@@ -45,12 +45,25 @@
 
           <div id="searchBar">
             <label for="model-name"
-              >모델명: <input id="model-name" type="text"
+              >모델명:
+              <input
+                id="model-name"
+                type="text"
+                onkeydown="enterkeySearch(event)"
             /></label>
             <label for="material-name"
-              >자재명: <input id="material-name" type="text"
+              >자재명:
+              <input
+                id="material-name"
+                type="text"
+                onkeydown="enterkeySearch(event)"
             /></label>
-            <input type="button" value="검색" class="btn btn-primary" />
+            <input
+              type="button"
+              value="검색"
+              class="btn btn-primary"
+              onclick="enterkeySearch(event)"
+            />
           </div>
           <div id="content">
             <div id="list">
@@ -65,7 +78,7 @@
                 </button>
               </div>
               <!--  -->
-              <div class="table-container">
+              <div class="table-container" id="tc">
                 <table id="dataTable">
                   <thead>
                     <tr>
@@ -89,8 +102,11 @@
               <h3>입고관리 상세정보</h3>
               <div class="controlBtn">
                 <div class="start">
-                  수량입력: <input type="text" placeholder=" 0" />
-                  <button class="btn btn-primary">입고완료</button>
+                  수량입력:
+                  <input id="quantity-input" type="text" placeholder=" 0" />
+                  <button id="complete-button" class="btn btn-primary">
+                    입고완료
+                  </button>
                 </div>
               </div>
               <div id="list-s">
@@ -103,16 +119,7 @@
                     </tr>
                   </thead>
                   <tbody>
-                    <tr>
-                      <td>1</td>
-                      <td>2024-07-07</td>
-                      <td>2405660000</td>
-                    </tr>
-                    <tr>
-                      <td>1</td>
-                      <td>2024-07-07</td>
-                      <td>2405660000</td>
-                    </tr>
+                    <!-- 여기 데이터가 쌓임 -->
                   </tbody>
                 </table>
               </div>

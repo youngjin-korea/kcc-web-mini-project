@@ -64,8 +64,8 @@
           <div class="mb-3">
             <select class="form-select" aria-label="규격">
               <option selected disabled>규격 선택</option>
-              <option value="1">EA</option>
-              <option value="2">BOX</option>
+              <option value="EA">EA</option>
+              <option value="BOX">BOX</option>
             </select>
           </div>
           <div class="mb-3">
@@ -100,14 +100,15 @@
         </form>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+        <button
+          id="closeBtn"
+          type="button"
+          class="btn btn-secondary"
+          data-bs-dismiss="modal"
+        >
           닫기
         </button>
-        <button
-          type="button"
-          class="btn btn-primary"
-          onclick="createMaterial()"
-        >
+        <button id="submitBtn" type="button" class="btn btn-primary">
           등록
         </button>
       </div>
