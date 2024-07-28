@@ -172,7 +172,7 @@ tbody tr:hover {
   background-color: #d3d3d3;
 }
 
-/* RACK */
+/* 창고 코드 */
 th:nth-child(2),
 td:nth-child(2) {
   width: 100px;
@@ -181,7 +181,7 @@ td:nth-child(2) {
 /* 자재명 */
 th:nth-child(3),
 td:nth-child(3) {
-  width: 250px;
+  width: 150px;
 }
 
 /* 모델명 */
@@ -193,19 +193,19 @@ td:nth-child(4) {
 /* 제조사 */
 th:nth-child(5),
 td:nth-child(5) {
-  width: 100px;
+  width: 200px;
 }
 
 /* 사용처 */
 th:nth-child(6),
 td:nth-child(6) {
-  width: 100px;
+  width: 150px;
 }
 
-/* 입출고날짜 */
+/* 규격 */
 th:nth-child(7),
 td:nth-child(7) {
-  width: 250px;
+  width: 100px;
 }
 
 /* 수량 */

@@ -294,3 +294,9 @@ function exportExcel() {
     excelHandler.getExcelFileName()
   );
 }
+
+
+/*--------- select 박스 누르면 전체 다 눌리게 하기--------*/
+document.getElementById("").addEventListener('click', () => {
+
+})
