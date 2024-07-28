@@ -263,4 +263,48 @@ function createMaterial() {
   // 폼 초기화
   form.reset();
   form.classList.remove("was-validated");
+
+  swal("등록 완료", "새로운 자재 등록이 완료되었습니다!", "success");
+}
+
+function deleteMaterial() {
+  if (selectedRowIndex === null) {
+    swal("선택된 자재가 없습니다.", "삭제할 자재를 선택해주세요.", "warning");
+    return;
+  }
+
+  swal({
+    title: "삭제 확인",
+    text: "선택된 자재를 정말 삭제하시겠습니까?",
+    icon: "warning",
+    buttons: true,
+    dangerMode: true,
+  }).then((willDelete) => {
+    if (willDelete) {
+      materialArray.splice(selectedRowIndex, 1);
+      populateTable(materialArray);
+      swal("삭제 완료", "선택된 자재가 삭제되었습니다.", "success");
+
+      // settingArea 필드 값 지우기
+      document.getElementById("materialNameInput").value = "";
+      document.getElementById("modelNameInput").value = "";
+      document.getElementById("manufacturerInput").value = "";
+      document.getElementById("categorySelectDetail").value = "";
+      document.getElementById("unitSelect").value = "";
+      document.getElementById("customRangeweight").value = 0;
+      document.getElementById("customNumber").value = 0;
+      document.getElementById("rangeValue").innerText = 0;
+      document.getElementById("storageMethodSelect").value = "";
+      document.getElementById("usageInput").value = "";
+
+      selectedRowIndex = null; // 선택된 자재 인덱스 초기화
+    }
+  });
+}
+
+function downloadExcel() {
+  const worksheet = XLSX.utils.json_to_sheet(materialArray);
+  const workbook = XLSX.utils.book_new();
+  XLSX.utils.book_append_sheet(workbook, worksheet, "Materials");
+  XLSX.writeFile(workbook, "materials.xlsx");
 }

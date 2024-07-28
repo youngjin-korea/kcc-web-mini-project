@@ -1,4 +1,4 @@
-<!-- modal.html -->
+<!-- Modal -->
 <div
   class="modal fade"
   id="createWarehouseModal"
@@ -20,7 +20,7 @@
         ></button>
       </div>
       <div class="modal-body">
-        <form id="createWarehouseForm">
+        <form id="createWarehouseForm" novalidate>
           <div class="mb-3">
             <label for="newWarehouseCode" class="form-label">창고 코드</label>
             <input
@@ -29,6 +29,7 @@
               id="newWarehouseCode"
               required
             />
+            <div class="invalid-feedback">창고 코드를 입력해주세요.</div>
           </div>
           <div class="mb-3">
             <label for="newWarehouseName" class="form-label">창고 이름</label>
@@ -38,6 +39,7 @@
               id="newWarehouseName"
               required
             />
+            <div class="invalid-feedback">창고 이름을 입력해주세요.</div>
           </div>
           <div class="mb-3">
             <label for="newWarehouseLocation" class="form-label"
@@ -49,24 +51,29 @@
               id="newWarehouseLocation"
               required
             />
+            <div class="invalid-feedback">창고 위치를 입력해주세요.</div>
           </div>
           <div class="col selectRange">
             <span class="col-2">가로</span>
             <input
               type="number"
               class="form-control numberInputSize"
-              id="rowNumber"
+              id="newRowNumber"
               placeholder="가로 크기"
               min="1"
+              required
             />
+            <div class="invalid-feedback">가로 크기를 입력해주세요.</div>
             <span class="col-2">세로</span>
             <input
               type="number"
               class="form-control numberInputSize"
-              id="colNumber"
+              id="newColNumber"
               placeholder="세로 크기"
               min="1"
+              required
             />
+            <div class="invalid-feedback">세로 크기를 입력해주세요.</div>
           </div>
           <div class="mb-5 mt-3">
             <select class="form-select" id="newWarehouseCategory" required>
@@ -74,9 +81,16 @@
               <option value="상온">상온</option>
               <option value="냉장">냉장</option>
             </select>
+            <div class="invalid-feedback">창고 종류를 선택해주세요.</div>
           </div>
 
-          <button type="submit" class="btn btn-primary">저장</button>
+          <button
+            type="button"
+            class="btn btn-primary"
+            onclick="createWarehouse()"
+          >
+            등록
+          </button>
         </form>
       </div>
     </div>

@@ -26,14 +26,21 @@
       integrity="sha384-/frq1SRXYH/bSyou/HUp/hib7RVN1TawQYja658FEOodR/FQBKVqT9Ol+Oz3Olq5"
       crossorigin="anonymous"
     />
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
   </head>
   <body>
     <div id="header-container"></div>
     <div id="navbar-container"></div>
     <div class="content p-3">
-      <h2 class="mb-3 ps-2" style="font-weight: bold; font-size: 1.3rem">
-        창고 설정
-      </h2>
+      <div class="d-flex align-items-center">
+        <h2 class="mb-3 ps-2" style="font-weight: bold; font-size: 1.3rem">
+          창고 설정
+        </h2>
+        <button class="btn btn-primary mb-3 ms-3" onclick="downloadExcel()">
+          창고 목록 다운로드
+        </button>
+      </div>
       <div class="container m-2">
         <div id="searchBox" class="form-row mb-3">
           <div class="row">
@@ -134,10 +141,14 @@
               />
             </div>
             <div class="col">
-              <select class="form-select" aria-label="창고 종류 선택">
-                <option selected disabled>창고 종류 선택</option>
-                <option value="1">상온</option>
-                <option value="2">냉장</option>
+              <select
+                class="form-select"
+                id="warehouseCategory"
+                aria-label="창고 종류 선택"
+              >
+                <option selected disabled value="">창고 종류 선택</option>
+                <option value="상온">상온</option>
+                <option value="냉장">냉장</option>
               </select>
             </div>
             <div class="col">
