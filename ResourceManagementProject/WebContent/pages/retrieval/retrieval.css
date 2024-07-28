@@ -8,7 +8,12 @@ body {
 }
 header {
   padding: 0.9rem;
-  font-weight: 600;
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+h3 {
+  font-weight: bold;
+  font-size: 1.3rem;
 }
 #body {
   /* display: flex; */
@@ -52,31 +57,31 @@ header {
 #content {
   display: flex;
   gap: 0.5rem;
+  height: 709px;
 }
 
 /* id list */
 #list {
   overflow-x: auto;
-  margin-bottom: 1.5rem;
+  /* margin-bottom: 1.5rem; */
   border: 1px solid #dee2e6;
   border-radius: 3px;
-  background-color: white;
   padding: 0.5rem;
+  background-color: white;
 }
 #list-s {
-  overflow-y: auto;
   max-height: 40rem;
   width: 30rem;
+  height: 622px;
+  overflow-y: scroll;
 }
-#table-s {
-  /* width: 5rem; */
-}
+
 /* controll */
 #control {
   border: 1px solid #dee2e6;
   border-radius: 3px;
-  background-color: white;
   padding: 0.5rem;
+  background-color: white;
 }
 #control div {
   /* width: 300rem; */
@@ -110,22 +115,30 @@ th {
   color: white;
 }
 tr:nth-child(even) {
-  background-color: #f4eeee;
+  background-color: #f7f7f7;
 }
 tr:hover {
   background-color: #d3d3d3;
   cursor: pointer;
 }
 
-/* button {
-  border-radius: 5px;
-  background-color: #0d6efd;
-  color: white;
-  padding: 6px;
-  border: 0;
-} */
+thead {
+  position: sticky;
+  top: 0;
+}
+
+#tc {
+  height: 645px;
+  overflow-y: scroll;
+  position: relative;
+}
 
 h3 {
   font-weight: bold;
   margin-bottom: 0.5rem;
+}
+
+/* click 됐을때 tr color */
+#clickedColor {
+  background-color: #d3d3d3;
 }
