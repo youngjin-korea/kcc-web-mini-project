@@ -7,6 +7,7 @@
   border-radius: 0.375rem;
   padding-top: 3px;
   padding-bottom: 3px;
+  background-color: white;
 }
 
 #btnGroup {
@@ -19,9 +20,11 @@
 }
 
 #settingArea {
+  background-color: white;
   border: 1px solid #dee2e6;
   border-radius: 0.375rem;
   padding: 20px;
+  margin-left: 30px;
 }
 
 #settingArea div {
@@ -36,28 +39,52 @@
 }
 
 .material-table-container {
-  max-height: 500px;
+  max-height: 700px;
+  max-width: max-content;
   overflow-y: auto;
+  overflow-x: auto;
   position: relative;
 }
 .material-table-container table {
-  width: 100%;
+  width: max-content;
   table-layout: fixed;
+  background-color: white;
 }
 .material-table-container thead {
   position: sticky;
   top: 0;
-  z-index: 1;
+  z-index: 5;
   background-color: #fff;
 }
-.table thead th {
-  background-color: #007bff;
-  color: white;
-}
-.table tbody tr:nth-child(even) {
-  background-color: #f2f2f2;
+
+table {
+  border-collapse: collapse;
+  font-size: 1rem;
 }
 
-.table td {
-  border-bottom: 1px solid #dee2e6;
+th {
+  padding: 8px;
+  text-align: center;
+}
+
+td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+th {
+  background-color: #0d6efd;
+  color: white;
+}
+tr:nth-child(even) {
+  background-color: #f7f7f7;
+}
+tr:hover {
+  background-color: #d3d3d3;
+  cursor: pointer;
+}
+
+h3 {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
 }
