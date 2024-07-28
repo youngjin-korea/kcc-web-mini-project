@@ -40,7 +40,7 @@ function createTable(data) {
       <td>${item.specification}</td>
       <td>${item.processingDate}</td>
       <td>
-        <button type="button" onclick="alert('클릭!')">
+        <button type="button" class="delete-btn" data-index="${index}">
           <img class="deleteImg" src="./static/deleteImg.jpg" />
         </button>
       </td>
@@ -134,6 +134,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
       // 전체 내역으로 다시 출력
       createTable(jsonAll);
+
+      // 안내하기
+      swal(
+        "입출고내역 초기화",
+        "입출고 내역 및 검색 조건을 초기화하였습니다.",
+        "success"
+      );
     });
 });
 
@@ -142,18 +149,75 @@ document.querySelector(".btn-outline-danger").addEventListener("click", () => {
   // 모든 체크박스 요소를 선택하여 NodeList로 반환
   const checkboxes = document.querySelectorAll(".delete-checkbox");
 
-  checkboxes.forEach((checkbox) => {
-    if (checkbox.checked) {
-      //체크박스의 data-index 속성을 가져와 정수로 변환
-      //이 값은 배열에서 항목의 인덱스를 나타냅니다.
-      const index = parseInt(checkbox.dataset.index, 10);
+  // 체크된 항목이 있는지 확인
+  const hasCheckedItem = Array.from(checkboxes).some(
+    (checkbox) => checkbox.checked
+  );
 
-      //인덱스에 해당하는 항목을 jsonAll 배열에서 삭제
-      // splice 메서드는 배열에서 특정 항목제거
-      jsonAll.splice(index, 1);
+  if (!hasCheckedItem) {
+    swal("삭제할 항목을 추가해주세요.");
+    return;
+  }
+
+  // 삭제 확인 메시지 표시 (custom confirm box with title)
+  swal({
+    title: "정말 삭제하겠습니까?",
+    text: "삭제된 입출력 내역은 복구되지 않습니다.",
+    icon: "warning",
+    buttons: true,
+    dangerMode: true,
+  }).then((checkbox) => {
+    if (checkbox) {
+      swal("선택한 입출력내역이 삭제 되었습니다.", {
+        icon: "success",
+      });
+
+      checkboxes.forEach((checkbox) => {
+        if (checkbox.checked) {
+          // 체크박스의 data-index 속성을 가져와 정수로 변환
+          // 이 값은 배열에서 항목의 인덱스
+          const index = parseInt(checkbox.dataset.index, 10);
+
+          // 인덱스에 해당하는 항목을 jsonAll 배열에서 삭제
+          // splice 메서드는 배열에서 특정 항목제거
+          jsonAll.splice(index, 1);
+
+          // jsonAll 배열의 현재 상태를 기준으로 테이블을 다시 생성
+          createTable(jsonAll);
+        }
+      });
+    } else {
+      swal("삭제취소 하였습니다.");
     }
   });
+});
 
-  // jsonAll 배열의 현재 상태를 기준으로 테이블을 다시 생성
-  createTable(jsonAll);
+// 삭제 버튼 클릭 시 각 항목 삭제
+document.getElementById("tableBody").addEventListener("click", (event) => {
+  if (event.target.closest(".delete-btn")) {
+    const index = parseInt(
+      event.target.closest(".delete-btn").dataset.index,
+      10
+    );
+
+    // 삭제 확인 메시지 표시 (custom confirm box with title)
+    swal({
+      title: "입출고 내역 삭제",
+      text: "정말 삭제하시겠습니까?\n삭제된 입출력 내역은 복구되지 않습니다.",
+      icon: "warning",
+      buttons: true,
+      dangerMode: true,
+    }).then((willDelete) => {
+      if (willDelete) {
+        swal("선택한 입출고 내역이 삭제되었습니다.", {
+          icon: "success",
+        });
+
+        jsonAll.splice(index, 1);
+        createTable(jsonAll);
+      } else {
+        swal("삭제 취소하였습니다.");
+      }
+    });
+  }
 });
