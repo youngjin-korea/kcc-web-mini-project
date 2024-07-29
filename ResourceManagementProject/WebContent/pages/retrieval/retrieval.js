@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
 // json fetch -> 재고쪽
 async function fetchData() {
   try {
-    const response = await fetch("../storage/out.json"); // JSON 파일 경로
+    const response = await fetch("./out.json"); // JSON 파일 경로
     if (!response.ok) {
       throw new Error("Network response was not ok " + response.statusText);
     }

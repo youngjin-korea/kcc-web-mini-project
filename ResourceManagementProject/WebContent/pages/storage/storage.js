@@ -65,31 +65,6 @@ function populateTable(data) {
     tableBody.appendChild(row);
   });
 }
-// data 객체의 tr 생성 함수
-function populateTable(data) {
-  const tableBody = document
-    .getElementById("dataTable")
-    .getElementsByTagName("tbody")[0];
-  tableBody.innerHTML = "";
-  data.forEach((item, index) => {
-    const row = document.createElement("tr");
-
-    // 행에 고유 ID를 설정 (예: "row-1", "row-2", ...)
-    row.id = `row-${index + 1}`;
-
-    row.addEventListener("click", (e) => {
-      clickedList(item, e);
-    });
-
-    Object.values(item).forEach((text) => {
-      const cell = document.createElement("td");
-      cell.textContent = text;
-      row.appendChild(cell);
-    });
-
-    tableBody.appendChild(row);
-  });
-}
 
 // 검색기능
 window.enterkeySearch = (event) => {
@@ -303,16 +278,4 @@ function resetModalFields() {
   document.getElementById("newCustomRangeweight").value = 50;
   document.getElementById("newCustomNumber").value = 50;
   document.getElementById("newRangeValue").innerText = 50;
-}
-
-function newUpdateValueFromRange(value) {
-  document.getElementById("newRangeValue").innerText = value;
-  document.getElementById("newCustomNumber").value = value;
-}
-
-function newUpdateValueFromNumber(value) {
-  if (value < 0) value = 0;
-  if (value > 100) value = 100;
-  document.getElementById("newRangeValue").innerText = value;
-  document.getElementById("newCustomRangeweight").value = value;
 }
