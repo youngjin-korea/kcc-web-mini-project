@@ -89,7 +89,7 @@ btnSixMonths.addEventListener("click", () => {
   dateEnd.valueAsDate = new Date(today);
 });
 
-/*---------------------------검색 구현 완료------------------*/
+/*---------------------------검색 구현------------------*/
 document.querySelector(".search").addEventListener("click", () => {
   const selectInput = document.getElementById("selectInput").value;
   const searchType = document.querySelector(
@@ -98,8 +98,13 @@ document.querySelector(".search").addEventListener("click", () => {
   const dateStartValue = new Date(document.getElementById("dateStart").value);
   const dateEndValue = new Date(document.getElementById("dateEnd").value);
 
+  console.log("Start Date:", dateStartValue);
+  console.log("End Date:", dateEndValue);
+
   const filteredData = rankingJson.filter((item) => {
     const itemDate = new Date(item.date);
+
+    console.log("Item Date:", itemDate);
 
     const specificationMatch =
       searchType === "total" ||
@@ -114,6 +119,9 @@ document.querySelector(".search").addEventListener("click", () => {
     );
   });
 
+  console.log("Filtered Data:", filteredData);
+
+  // 데이터 집계
   const aggregatedData = {};
 
   filteredData.forEach((item) => {
@@ -126,6 +134,9 @@ document.querySelector(".search").addEventListener("click", () => {
 
   const aggregatedArray = Object.values(aggregatedData);
 
+  console.log("Aggregated Data:", aggregatedArray);
+
+  // 테이블 업데이트
   createTable(aggregatedArray);
 });
 
