@@ -20,82 +20,126 @@
         ></button>
       </div>
       <div class="modal-body">
-        <form id="createMaterialForm">
+        <form id="createMaterialForm" novalidate>
           <div class="mb-3">
-            <label for="materialNameInput" class="form-label">자재명</label>
+            <label for="newMaterialNameInput" class="form-label">자재명</label>
             <input
               type="text"
               class="form-control"
-              id="materialNameInput"
+              id="newMaterialNameInput"
               placeholder="자재명 입력"
+              required
             />
+            <div class="invalid-feedback">자재명을 입력해주세요.</div>
           </div>
           <div class="mb-3">
-            <label for="modelNameInput" class="form-label">모델명</label>
+            <label for="newModelNameInput" class="form-label">모델명</label>
             <input
               type="text"
               class="form-control"
-              id="modelNameInput"
+              id="newModelNameInput"
               placeholder="모델명 입력"
+              required
             />
+            <div class="invalid-feedback">모델명을 입력해주세요.</div>
           </div>
           <div class="mb-3">
-            <label for="manufacturerInput" class="form-label">제조사</label>
+            <label for="newManufacturerInput" class="form-label">제조사</label>
             <input
               type="text"
               class="form-control"
-              id="manufacturerInput"
+              id="newManufacturerInput"
               placeholder="제조사 입력"
+              required
             />
+            <div class="invalid-feedback">제조사를 입력해주세요.</div>
           </div>
           <div class="mb-3">
-            <select class="form-select" aria-label="카테고리">
-              <option selected disabled>카테고리 선택</option>
-              <option value="1">청과</option>
-              <option value="2">정육</option>
-              <option value="3">음료</option>
-              <option value="4">의류</option>
-              <option value="5">가구</option>
-              <option value="6">사무용품</option>
-              <option value="7">전자기기</option>
-              <option value="8">기타</option>
+            <select
+              class="form-select"
+              id="newCategorySelect"
+              aria-label="카테고리"
+              required
+            >
+              <option selected disabled value="">카테고리 선택</option>
+              <option value="청과">청과</option>
+              <option value="정육">정육</option>
+              <option value="음료">음료</option>
+              <option value="의류">의류</option>
+              <option value="가구">가구</option>
+              <option value="사무용품">사무용품</option>
+              <option value="전자기기">전자기기</option>
+              <option value="기타">기타</option>
             </select>
+            <div class="invalid-feedback">카테고리를 선택해주세요.</div>
           </div>
           <div class="mb-3">
-            <select class="form-select" aria-label="규격">
-              <option selected disabled>규격 선택</option>
-              <option value="1">EA</option>
-              <option value="2">BOX</option>
+            <select
+              class="form-select"
+              id="newUnitSelect"
+              aria-label="규격"
+              required
+            >
+              <option selected disabled value="">규격 선택</option>
+              <option value="EA">EA</option>
+              <option value="BOX">BOX</option>
             </select>
+            <div class="invalid-feedback">규격을 선택해주세요.</div>
           </div>
           <div class="mb-3">
             <label for="newCustomRangeweight" class="form-label"
               >규격 당 무게</label
             >
             <span id="newRangeValue" style="font-weight: bold; color: #0d6efd"
-              >50</span
+              >0</span
             >
             <input
               type="range"
               class="form-range"
               id="newCustomRangeweight"
-              min="0"
+              min="0.0"
               max="100"
+              step="0.1"
+              value="0"
+              oninput="newUpdateValueFromRange(this.value)"
+              required
             />
-            <label style="margin-bottom: 5px">직접 입력</label>
+            <div class="invalid-feedback">규격 당 무게를 입력해주세요.</div>
+            <label style="margin-top: 5px; margin-bottom: 5px">직접 입력</label>
             <input
               class="form-control"
               type="number"
               id="newCustomNumber"
-              min="0"
+              min="0.0"
               max="100"
-              value="50"
+              step="0.1"
+              value="0"
               oninput="newUpdateValueFromNumber(this.value)"
+              required
             />
           </div>
           <div class="mb-3">
-            <label for="usageInput" class="form-label">사용처</label>
-            <textarea class="form-control" id="usageInput" rows="3"></textarea>
+            <select
+              class="form-select"
+              id="newStorageMethodSelect"
+              aria-label="보관 방법"
+              required
+            >
+              <option selected disabled value="">보관 방법 선택</option>
+              <option value="상온">상온</option>
+              <option value="냉장">냉장</option>
+            </select>
+            <div class="invalid-feedback">보관 방법을 선택해주세요.</div>
+          </div>
+          <div class="mb-3">
+            <label for="newUsageInput" class="form-label">사용처</label>
+            <textarea
+              class="form-control"
+              id="newUsageInput"
+              rows="3"
+              required
+            ></textarea>
+            <div class="invalid-feedback">사용처를 입력해주세요.</div>
           </div>
         </form>
       </div>

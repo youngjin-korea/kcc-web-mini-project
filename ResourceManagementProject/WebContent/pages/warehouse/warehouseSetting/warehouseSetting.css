@@ -25,6 +25,8 @@
   padding: 20px;
   background-color: white;
   margin-left: 30px;
+  flex: 1;
+  max-width: 300px;
 }
 
 #settingArea div {
@@ -42,37 +44,27 @@
   max-height: 500px;
   max-width: max-content;
   overflow-y: auto;
+  overflow-x: auto;
   position: relative;
+  flex: 1;
 }
+
 .warehouse-table-container table {
   width: max-content;
   table-layout: fixed;
   background-color: white;
 }
+
 .warehouse-table-container thead {
   position: sticky;
   top: 0;
   z-index: 1;
   background-color: #fff;
 }
+
 .table thead th {
   background-color: #007bff;
   color: white;
-}
-
-.table th:nth-child(1),
-.table td:nth-child(1) {
-  width: 15%;
-}
-
-.table th:nth-child(4),
-.table td:nth-child(4) {
-  width: 10%;
-}
-
-.table th:nth-child(5),
-.table td:nth-child(5) {
-  width: 15%;
 }
 
 table {
