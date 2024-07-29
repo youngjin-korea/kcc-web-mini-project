@@ -1,292 +1,292 @@
 [
-    {
-        "materialName": "사과",
-        "modelName": "APL-1234",
-        "manufacturer": "Fruit Co.",
-        "category": "청과",
-        "unit": "BOX",
-        "unitWeight": 10.0,
-        "usage": "식료품점",
-        "storageMethod": "냉장"
-    },
-    {
-        "materialName": "바나나",
-        "modelName": "BAN-5678",
-        "manufacturer": "Tropical Fruits Ltd.",
-        "category": "청과",
-        "unit": "BOX",
-        "unitWeight": 18.0,
-        "usage": "슈퍼마켓",
-        "storageMethod": "상온"
-    },
-    {
-        "materialName": "쇠고기",
-        "modelName": "BEEF-91011",
-        "manufacturer": "Meat Masters Inc.",
-        "category": "정육",
-        "unit": "EA",
-        "unitWeight": 1.0,
-        "usage": "정육점",
-        "storageMethod": "냉장"
-    },
-    {
-        "materialName": "닭고기",
-        "modelName": "CHK-1213",
-        "manufacturer": "Poultry Farms",
-        "category": "정육",
-        "unit": "BOX",
-        "unitWeight": 10.0,
-        "usage": "식당",
-        "storageMethod": "냉장"
-    },
-    {
-        "materialName": "우유",
-        "modelName": "MILK-1415",
-        "manufacturer": "Dairy Best",
-        "category": "음료",
-        "unit": "EA",
-        "unitWeight": 1.0,
-        "usage": "카페",
-        "storageMethod": "냉장"
-    },
-    {
-        "materialName": "생수",
-        "modelName": "WTR-1617",
-        "manufacturer": "Pure Water Co.",
-        "category": "음료",
-        "unit": "BOX",
-        "unitWeight": 12.0,
-        "usage": "사무실",
-        "storageMethod": "상온"
-    },
-    {
-        "materialName": "A4 용지",
-        "modelName": "PAPER-1819",
-        "manufacturer": "Office Supplies Ltd.",
-        "category": "사무용품",
-        "unit": "BOX",
-        "unitWeight": 2.5,
-        "usage": "학교",
-        "storageMethod": "상온"
-    },
-    {
-        "materialName": "볼펜",
-        "modelName": "PEN-2021",
-        "manufacturer": "Writing Instruments Co.",
-        "category": "사무용품",
-        "unit": "EA",
-        "unitWeight": 0.01,
-        "usage": "회사",
-        "storageMethod": "상온"
-    },
-    {
-        "materialName": "컴퓨터",
-        "modelName": "COMP-2223",
-        "manufacturer": "Tech Innovators",
-        "category": "전자기기",
-        "unit": "EA",
-        "unitWeight": 5.0,
-        "usage": "사무실",
-        "storageMethod": "상온"
-    },
-    {
-        "materialName": "프린터",
-        "modelName": "PRINT-2425",
-        "manufacturer": "Print Solutions Inc.",
-        "category": "전자기기",
-        "unit": "EA",
-        "unitWeight": 8.0,
-        "usage": "학교",
-        "storageMethod": "상온"
-    },
-    {
-        "materialName": "셔츠",
-        "modelName": "SHIRT-2627",
-        "manufacturer": "Fashion Co.",
-        "category": "의류",
-        "unit": "EA",
-        "unitWeight": 0.3,
-        "usage": "의류 매장",
-        "storageMethod": "상온"
-    },
-    {
-        "materialName": "바지",
-        "modelName": "PANTS-2829",
-        "manufacturer": "Clothing Inc.",
-        "category": "의류",
-        "unit": "EA",
-        "unitWeight": 0.5,
-        "usage": "의류 매장",
-        "storageMethod": "상온"
-    },
-    {
-        "materialName": "책상",
-        "modelName": "DESK-3031",
-        "manufacturer": "Furniture Makers",
-        "category": "가구",
-        "unit": "EA",
-        "unitWeight": 20.0,
-        "usage": "사무실",
-        "storageMethod": "상온"
-    },
-    {
-        "materialName": "의자",
-        "modelName": "CHAIR-3233",
-        "manufacturer": "Comfort Seating",
-        "category": "가구",
-        "unit": "EA",
-        "unitWeight": 10.0,
-        "usage": "학교",
-        "storageMethod": "상온"
-    },
-    {
-        "materialName": "세제",
-        "modelName": "DETERG-3839",
-        "manufacturer": "Cleaning Supplies Inc.",
-        "category": "기타",
-        "unit": "BOX",
-        "unitWeight": 5.0,
-        "usage": "가정",
-        "storageMethod": "상온"
-    },
-    {
-        "materialName": "페인트",
-        "modelName": "PAINT-4041",
-        "manufacturer": "Paint Masters",
-        "category": "기타",
-        "unit": "EA",
-        "unitWeight": 1.0,
-        "usage": "건설 현장",
-        "storageMethod": "상온"
-    },
-    {
-        "materialName": "공예 재료",
-        "modelName": "CRAFT-4243",
-        "manufacturer": "Hobby Supplies",
-        "category": "기타",
-        "unit": "BOX",
-        "unitWeight": 2.0,
-        "usage": "취미 생활",
-        "storageMethod": "상온"
-    },
-    {
-        "materialName": "유아용 장난감",
-        "modelName": "TOY-4445",
-        "manufacturer": "Kids Fun Ltd.",
-        "category": "기타",
-        "unit": "EA",
-        "unitWeight": 0.5,
-        "usage": "가정",
-        "storageMethod": "상온"
-    },
-    {
-        "materialName": "식탁",
-        "modelName": "TABLE-4647",
-        "manufacturer": "Home Furniture",
-        "category": "가구",
-        "unit": "EA",
-        "unitWeight": 25.0,
-        "usage": "가정",
-        "storageMethod": "상온"
-    },
-    {
-        "materialName": "오렌지",
-        "modelName": "ORG-5678",
-        "manufacturer": "Citrus Farms",
-        "category": "청과",
-        "unit": "BOX",
-        "unitWeight": 15.0,
-        "usage": "슈퍼마켓",
-        "storageMethod": "냉장"
-    },
-    {
-        "materialName": "양파",
-        "modelName": "ONN-91011",
-        "manufacturer": "Veggie Farms",
-        "category": "청과",
-        "unit": "BOX",
-        "unitWeight": 20.0,
-        "usage": "식료품점",
-        "storageMethod": "상온"
-    },
-    {
-        "materialName": "돼지고기",
-        "modelName": "PORK-1213",
-        "manufacturer": "Meat Masters Inc.",
-        "category": "정육",
-        "unit": "EA",
-        "unitWeight": 2.0,
-        "usage": "정육점",
-        "storageMethod": "냉장"
-    },
-    {
-        "materialName": "양고기",
-        "modelName": "LAM-1415",
-        "manufacturer": "Farm Fresh Meats",
-        "category": "정육",
-        "unit": "BOX",
-        "unitWeight": 12.0,
-        "usage": "식당",
-        "storageMethod": "냉장"
-    },
-    {
-        "materialName": "탄산음료",
-        "modelName": "SODA-1617",
-        "manufacturer": "Drink Co.",
-        "category": "음료",
-        "unit": "BOX",
-        "unitWeight": 8.0,
-        "usage": "편의점",
-        "storageMethod": "상온"
-    },
-    {
-        "materialName": "커피",
-        "modelName": "COF-1819",
-        "manufacturer": "Coffee Roasters",
-        "category": "음료",
-        "unit": "BOX",
-        "unitWeight": 6.0,
-        "usage": "카페",
-        "storageMethod": "상온"
-    },
-    {
-        "materialName": "책",
-        "modelName": "BOOK-2021",
-        "manufacturer": "Publishing House",
-        "category": "사무용품",
-        "unit": "BOX",
-        "unitWeight": 10.0,
-        "usage": "도서관",
-        "storageMethod": "상온"
-    },
-    {
-        "materialName": "파일 폴더",
-        "modelName": "FOLDER-2223",
-        "manufacturer": "Office Supplies Ltd.",
-        "category": "사무용품",
-        "unit": "BOX",
-        "unitWeight": 4.0,
-        "usage": "회사",
-        "storageMethod": "상온"
-    },
-    {
-        "materialName": "헤드폰",
-        "modelName": "HEAD-2425",
-        "manufacturer": "Audio Tech",
-        "category": "전자기기",
-        "unit": "EA",
-        "unitWeight": 0.5,
-        "usage": "가전매장",
-        "storageMethod": "상온"
-    },
-    {
-        "materialName": "카메라",
-        "modelName": "CAM-2627",
-        "manufacturer": "Photo Works",
-        "category": "전자기기",
-        "unit": "EA",
-        "unitWeight": 1.0,
-        "usage": "사진관",
-        "storageMethod": "상온"
-    }
+  {
+    "materialName": "사과",
+    "modelName": "APL-1234",
+    "manufacturer": "Fruit Co.",
+    "category": "청과",
+    "unit": "BOX",
+    "unitWeight": 10.0,
+    "storageMethod": "냉장",
+    "usage": "식료품점"
+  },
+  {
+    "materialName": "바나나",
+    "modelName": "BAN-5678",
+    "manufacturer": "Tropical Fruits Ltd.",
+    "category": "청과",
+    "unit": "BOX",
+    "unitWeight": 18.0,
+    "storageMethod": "상온",
+    "usage": "슈퍼마켓"
+  },
+  {
+    "materialName": "쇠고기",
+    "modelName": "BEEF-91011",
+    "manufacturer": "Meat Masters Inc.",
+    "category": "정육",
+    "unit": "EA",
+    "unitWeight": 1.0,
+    "storageMethod": "냉장",
+    "usage": "정육점"
+  },
+  {
+    "materialName": "닭고기",
+    "modelName": "CHK-1213",
+    "manufacturer": "Poultry Farms",
+    "category": "정육",
+    "unit": "BOX",
+    "unitWeight": 10.0,
+    "storageMethod": "냉장",
+    "usage": "식당"
+  },
+  {
+    "materialName": "우유",
+    "modelName": "MILK-1415",
+    "manufacturer": "Dairy Best",
+    "category": "음료",
+    "unit": "EA",
+    "unitWeight": 1.0,
+    "storageMethod": "냉장",
+    "usage": "카페"
+  },
+  {
+    "materialName": "생수",
+    "modelName": "WTR-1617",
+    "manufacturer": "Pure Water Co.",
+    "category": "음료",
+    "unit": "BOX",
+    "unitWeight": 12.0,
+    "storageMethod": "상온",
+    "usage": "사무실"
+  },
+  {
+    "materialName": "A4 용지",
+    "modelName": "PAPER-1819",
+    "manufacturer": "Office Supplies Ltd.",
+    "category": "사무용품",
+    "unit": "BOX",
+    "unitWeight": 2.5,
+    "storageMethod": "상온",
+    "usage": "학교"
+  },
+  {
+    "materialName": "볼펜",
+    "modelName": "PEN-2021",
+    "manufacturer": "Writing Instruments Co.",
+    "category": "사무용품",
+    "unit": "EA",
+    "unitWeight": 0.01,
+    "storageMethod": "상온",
+    "usage": "회사"
+  },
+  {
+    "materialName": "컴퓨터",
+    "modelName": "COMP-2223",
+    "manufacturer": "Tech Innovators",
+    "category": "전자기기",
+    "unit": "EA",
+    "unitWeight": 5.0,
+    "storageMethod": "상온",
+    "usage": "사무실"
+  },
+  {
+    "materialName": "프린터",
+    "modelName": "PRINT-2425",
+    "manufacturer": "Print Solutions Inc.",
+    "category": "전자기기",
+    "unit": "EA",
+    "unitWeight": 8.0,
+    "storageMethod": "상온",
+    "usage": "학교"
+  },
+  {
+    "materialName": "셔츠",
+    "modelName": "SHIRT-2627",
+    "manufacturer": "Fashion Co.",
+    "category": "의류",
+    "unit": "EA",
+    "unitWeight": 0.3,
+    "storageMethod": "상온",
+    "usage": "의류 매장"
+  },
+  {
+    "materialName": "바지",
+    "modelName": "PANTS-2829",
+    "manufacturer": "Clothing Inc.",
+    "category": "의류",
+    "unit": "EA",
+    "unitWeight": 0.5,
+    "storageMethod": "상온",
+    "usage": "의류 매장"
+  },
+  {
+    "materialName": "책상",
+    "modelName": "DESK-3031",
+    "manufacturer": "Furniture Makers",
+    "category": "가구",
+    "unit": "EA",
+    "unitWeight": 20.0,
+    "storageMethod": "상온",
+    "usage": "사무실"
+  },
+  {
+    "materialName": "의자",
+    "modelName": "CHAIR-3233",
+    "manufacturer": "Comfort Seating",
+    "category": "가구",
+    "unit": "EA",
+    "unitWeight": 10.0,
+    "storageMethod": "상온",
+    "usage": "학교"
+  },
+  {
+    "materialName": "세제",
+    "modelName": "DETERG-3839",
+    "manufacturer": "Cleaning Supplies Inc.",
+    "category": "기타",
+    "unit": "BOX",
+    "unitWeight": 5.0,
+    "storageMethod": "상온",
+    "usage": "가정"
+  },
+  {
+    "materialName": "페인트",
+    "modelName": "PAINT-4041",
+    "manufacturer": "Paint Masters",
+    "category": "기타",
+    "unit": "EA",
+    "unitWeight": 1.0,
+    "storageMethod": "상온",
+    "usage": "건설 현장"
+  },
+  {
+    "materialName": "공예 재료",
+    "modelName": "CRAFT-4243",
+    "manufacturer": "Hobby Supplies",
+    "category": "기타",
+    "unit": "BOX",
+    "unitWeight": 2.0,
+    "storageMethod": "상온",
+    "usage": "취미 생활"
+  },
+  {
+    "materialName": "유아용 장난감",
+    "modelName": "TOY-4445",
+    "manufacturer": "Kids Fun Ltd.",
+    "category": "기타",
+    "unit": "EA",
+    "unitWeight": 0.5,
+    "storageMethod": "상온",
+    "usage": "가정"
+  },
+  {
+    "materialName": "식탁",
+    "modelName": "TABLE-4647",
+    "manufacturer": "Home Furniture",
+    "category": "가구",
+    "unit": "EA",
+    "unitWeight": 25.0,
+    "storageMethod": "상온",
+    "usage": "가정"
+  },
+  {
+    "materialName": "오렌지",
+    "modelName": "ORG-5678",
+    "manufacturer": "Citrus Farms",
+    "category": "청과",
+    "unit": "BOX",
+    "unitWeight": 15.0,
+    "storageMethod": "냉장",
+    "usage": "슈퍼마켓"
+  },
+  {
+    "materialName": "양파",
+    "modelName": "ONN-91011",
+    "manufacturer": "Veggie Farms",
+    "category": "청과",
+    "unit": "BOX",
+    "unitWeight": 20.0,
+    "storageMethod": "상온",
+    "usage": "식료품점"
+  },
+  {
+    "materialName": "돼지고기",
+    "modelName": "PORK-1213",
+    "manufacturer": "Meat Masters Inc.",
+    "category": "정육",
+    "unit": "EA",
+    "unitWeight": 2.0,
+    "storageMethod": "냉장",
+    "usage": "정육점"
+  },
+  {
+    "materialName": "양고기",
+    "modelName": "LAM-1415",
+    "manufacturer": "Farm Fresh Meats",
+    "category": "정육",
+    "unit": "BOX",
+    "unitWeight": 12.0,
+    "storageMethod": "냉장",
+    "usage": "식당"
+  },
+  {
+    "materialName": "탄산음료",
+    "modelName": "SODA-1617",
+    "manufacturer": "Drink Co.",
+    "category": "음료",
+    "unit": "BOX",
+    "unitWeight": 8.0,
+    "storageMethod": "상온",
+    "usage": "편의점"
+  },
+  {
+    "materialName": "커피",
+    "modelName": "COF-1819",
+    "manufacturer": "Coffee Roasters",
+    "category": "음료",
+    "unit": "BOX",
+    "unitWeight": 6.0,
+    "storageMethod": "상온",
+    "usage": "카페"
+  },
+  {
+    "materialName": "책",
+    "modelName": "BOOK-2021",
+    "manufacturer": "Publishing House",
+    "category": "사무용품",
+    "unit": "BOX",
+    "unitWeight": 10.0,
+    "storageMethod": "상온",
+    "usage": "도서관"
+  },
+  {
+    "materialName": "파일 폴더",
+    "modelName": "FOLDER-2223",
+    "manufacturer": "Office Supplies Ltd.",
+    "category": "사무용품",
+    "unit": "BOX",
+    "unitWeight": 4.0,
+    "storageMethod": "상온",
+    "usage": "회사"
+  },
+  {
+    "materialName": "헤드폰",
+    "modelName": "HEAD-2425",
+    "manufacturer": "Audio Tech",
+    "category": "전자기기",
+    "unit": "EA",
+    "unitWeight": 0.5,
+    "storageMethod": "상온",
+    "usage": "가전매장"
+  },
+  {
+    "materialName": "카메라",
+    "modelName": "CAM-2627",
+    "manufacturer": "Photo Works",
+    "category": "전자기기",
+    "unit": "EA",
+    "unitWeight": 1.0,
+    "storageMethod": "상온",
+    "usage": "사진관"
+  }
 ]
