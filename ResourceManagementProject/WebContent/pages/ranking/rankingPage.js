@@ -250,7 +250,7 @@ window.onload = function () {
     exportEnabled: true,
     animationEnabled: true,
     title: {
-      text: "입출고 상위 5위",
+      text: "입출고 top 5",
     },
     data: [
       {
